@@ -5,8 +5,8 @@ import { addMsg } from "../../actions";
 
 class AddMessageForm extends React.Component {
   state = {
-    msgBox: null,
-    usernameBox: null,
+    usernameBox: "",
+    msgBox: "",
   };
 
   // updates local state of ChitChat message input box
@@ -61,7 +61,7 @@ class AddMessageForm extends React.Component {
                   type="text"
                   id="usernameBox"
                   onChange={this.handleChangeUsr}
-                  required="true"
+                  required
                 />
               </div>
             </div>
@@ -75,7 +75,7 @@ class AddMessageForm extends React.Component {
                   type="text"
                   id="msgBox"
                   onChange={this.handleChangeMsg}
-                  required="true"
+                  required
                 />
               </div>
             </div>
