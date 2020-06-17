@@ -2,16 +2,52 @@ import React from "react";
 import "../../App.css";
 import { connect } from "react-redux";
 import { delMsg, togglePopup } from "../../actions";
+import { OverlayTrigger } from "react-bootstrap";
+import { Tooltip } from "react-bootstrap";
 
 class ListItem extends React.Component {
   render() {
-    const { value, delMsgID } = this.props;
-    console.log("renderListItem popUpSeen:", this.props);
+    const { value, delMsgID, messages } = this.props;
+    const filteredMessage = messages.filter((message) => {
+      // evaluates to true if id matches then adds it to array
+      return message.id === delMsgID;
+    });
+    console.log("renderListItem props:", this.props);
     return (
-
       <tr>
         <td>
-          {value}
+          <OverlayTrigger
+            key={"left"}
+            placement={"left"}
+            overlay={
+              <Tooltip id={`tooltip-left`}>
+                <h3>Message Details</h3>
+                <div>
+                  <h6>
+                    <strong>
+                      <u>Message ID:</u>
+                    </strong>{" "}
+                    {filteredMessage[0].id}
+                  </h6>
+                  <h6>
+                    <strong>
+                      <u>Username:</u>
+                    </strong>{" "}
+                    {filteredMessage[0].username}
+                  </h6>
+                  <h6>
+                    <strong>
+                      <u>Date Posted:</u>
+                    </strong>{" "}
+                    {filteredMessage[0].timestamp.toString()}
+                  </h6>
+                </div>
+              </Tooltip>
+            }
+          >
+
+            <p variant="secondary">{value}</p>
+          </OverlayTrigger>
         </td>
         <td className={"delButtonRow"}>
           <button
