@@ -22,7 +22,6 @@ class AddMessageForm extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log("addMessageForm", this.state.msgBox);
     const newMessage = {
       message: this.state.msgBox,
       username: this.state.usernameBox,
@@ -33,7 +32,6 @@ class AddMessageForm extends React.Component {
     const date = new Date();
     newMessage.timestamp = date;
     this.props.addMsg(newMessage);
-    console.log("addMessageFeed", this.props);
   };
 
   render() {

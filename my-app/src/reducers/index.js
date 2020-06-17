@@ -9,7 +9,6 @@ const userStates = {
 };
 
 const userReducer = (state = userStates, action) => {
-  console.log("userReducer called:", action.type);
   if (action.type === "ADD_MESSAGE") {
     const newState = [...state.users];
     let userExists = false;
@@ -26,13 +25,11 @@ const userReducer = (state = userStates, action) => {
       };
       newState.push(newUser);
     }
-    console.log("newState", { users: newState });
     return { users: newState };
   }
   if (action.type === "DELETE_MESSAGE") {
     const newState = [...state.users];
     for (const user of newState) {
-      console.log("userReducer delMsg msgIds:", user.msgIds);
       if (user.msgIds.includes(action.id)) {
         const index = user.msgIds.indexOf(action.id);
         if (index > -1) {
@@ -51,10 +48,7 @@ const popupToggle = {
 };
 
 const toggleReducer = (state = popupToggle, action) => {
-  console.log("toggleReducer called:", action.type);
   if (action.type === "TOGGLE_POPUP") {
-    console.log("togglePopup called with id:", action.id);
-    console.log("togglePopup called with state:", state.popPresent);
     return { popPresent: !state.popPresent, popID: action.id };
   }
   return state;
@@ -65,7 +59,6 @@ const pageState = {
 };
 
 const pageReducer = (state = pageState, action) => {
-  console.log("pageReducer called:", action.type);
   if (action.type === "HOME_PAGE_SELECTED") {
     return { isHome: "true" };
   }
@@ -106,12 +99,8 @@ const initialMessageState = {
 };
 
 const messageReducer = (state = initialMessageState, action) => {
-  console.log("reducerAddMsg", state, action);
-  console.log("reducerAddMsgMessage", action.message);
-  console.log("reducerAddMsgState", state);
   if (action.type === "ADD_MESSAGE") {
     const newState = [...state.messages, action.message];
-    console.log("newState", { messages: newState });
     return { messages: newState };
   }
   if (action.type === "DELETE_MESSAGE") {

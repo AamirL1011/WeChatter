@@ -5,19 +5,11 @@ import { changePageState } from "../../actions";
 
 class NavbarItem extends React.Component {
   changeToHome = (e) => {
-    console.log("changeToHomeCalled", this.props.isHome.isHome);
     this.props.changePageState(true);
-    setTimeout(() => {
-      console.log("changeToHomeStatus:", this.props.isHome.isHome);
-    }, 20);
   };
 
   changeToAbout = (e) => {
-    console.log("changeToAboutCalled", this.props.isHome.isHome);
     this.props.changePageState(false);
-    setTimeout(() => {
-      console.log("changeToAboutStatus:", this.props.isHome.isHome);
-    }, 20);
   };
 
   render() {

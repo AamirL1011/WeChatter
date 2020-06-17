@@ -12,7 +12,6 @@ class ListItem extends React.Component {
       // evaluates to true if id matches then adds it to array
       return message.id === delMsgID;
     });
-    console.log("renderListItem props:", this.props);
     return (
       <tr>
         <td>
@@ -21,11 +20,11 @@ class ListItem extends React.Component {
             placement={"left"}
             overlay={
               <Tooltip id={`tooltip-left`}>
-                <h4>Message Details</h4>
+                <h4>ChitChat Details</h4>
                 <div>
                   <h6>
                     <strong>
-                      <u>Message ID:</u>
+                      <u>ChitChat ID:</u>
                     </strong>{" "}
                     {filteredMessage[0].id}
                   </h6>
@@ -63,27 +62,6 @@ class ListItem extends React.Component {
           <p className={"transparentCol"}>......</p>
         </td>
       </tr>
-
-      /*{<span>
-        <li>
-          <button
-            className="messageBtn"
-            onClick={() => {
-              this.props.togglePopup(delMsgID);
-            }}
-          >
-            {value}
-          </button>
-          <button
-            className="button_stuff righty"
-            onClick={() => {
-              this.props.delMsg(delMsgID);
-            }}
-          >
-            X
-          </button>
-        </li>
-      </span>}*/
     );
   }
 }

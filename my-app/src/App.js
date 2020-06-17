@@ -13,7 +13,6 @@ class App extends React.Component {
         <br />
         <div className="animationNav">
           <Navbar />
-          {console.log("App re-render state:", this.props.isHome.isHome)};
           {this.props.isHome.isHome === "true" ? <Homepage /> : <About />};
         </div>
       </div>

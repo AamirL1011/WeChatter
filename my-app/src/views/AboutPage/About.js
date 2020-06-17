@@ -7,7 +7,9 @@ class About extends React.Component {
     return (
       <section className="container">
         <div id="about" className="container-div">
-          <h1>About the Developer</h1>
+          <br/>
+          <br/>
+          <h2>About the Developer</h2>
           <div className="msgFeed">
             <p>Hi! I am a 3rd year computer science student.</p>
             <p>This is a React web app where you can post the latest chatter!</p>

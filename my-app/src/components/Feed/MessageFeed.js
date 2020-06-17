@@ -6,7 +6,6 @@ import ListItem from "./ListItem";
 class MessageFeed extends React.Component {
   render() {
     const { messages } = this.props;
-    console.log("messageFeedProps", this.props);
     const messageList = messages.map((message) => (
       <ListItem
         key={message.id}
