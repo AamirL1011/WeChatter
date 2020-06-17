@@ -1,8 +1,12 @@
 
 
 
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## WeChatter
+
+Post messages to ChitChat with your friends and strangers! (Currently a work in progress)
+
 
 ## Available Scripts
 
