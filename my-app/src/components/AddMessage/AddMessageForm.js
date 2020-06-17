@@ -39,7 +39,7 @@ class AddMessageForm extends React.Component {
   render() {
     return (
       <div className="container-div">
-        <h1>Add A Message</h1>
+        <h1>Make A ChitChat</h1>
         <div className="msgForm">
           <h3>Please complete the form:</h3>
           <form onSubmit={this.handleSubmit}>
@@ -55,7 +55,7 @@ class AddMessageForm extends React.Component {
               <label htmlFor="msgBox">Message:</label>
               <input type="text" id="msgBox" onChange={this.handleChangeMsg} />
             </div>
-            <button className="button_stuff">Add Message</button>
+            <button className="button_stuff">ChitChat</button>
           </form>
         </div>
       </div>

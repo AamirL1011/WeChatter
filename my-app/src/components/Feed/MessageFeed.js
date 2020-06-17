@@ -16,7 +16,7 @@ class MessageFeed extends React.Component {
     ));
     return (
       <div className="container-div" id="msgFeed">
-        <h1>Message Feed</h1>
+        <h1>Chatter</h1>
         <div className="msgFeed">
           <table id="msgList">{messageList}</table>
         </div>

@@ -9,12 +9,7 @@ class Homepage extends React.Component {
   render() {
     return (
       <section className="container">
-        {this.props.popupSeen ? (
-          <DetailedView toggleID={this.props.popupID} />
-        ) : (
-          <AddMessageForm />
-        )}
-        ;
+        <AddMessageForm />
         <MessageFeed />
       </section>
     );

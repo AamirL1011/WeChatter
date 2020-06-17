@@ -21,7 +21,7 @@ class ListItem extends React.Component {
             placement={"left"}
             overlay={
               <Tooltip id={`tooltip-left`}>
-                <h3>Message Details</h3>
+                <h4>Message Details</h4>
                 <div>
                   <h6>
                     <strong>
@@ -60,7 +60,7 @@ class ListItem extends React.Component {
           </button>
         </td>
         <td>
-          <p className={"transparentCol"}>..</p>
+          <p className={"transparentCol"}>....</p>
         </td>
       </tr>
 
