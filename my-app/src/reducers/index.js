@@ -97,7 +97,7 @@ const initialMessageState = {
       id: 2,
     },
     {
-      message: "Phew, my project deadline is near!",
+      message: "Oh no, my test is tomorrow!",
       username: "SpongeBob",
       timestamp: new Date("June 15, 2020 22:00:00"),
       id: 3,

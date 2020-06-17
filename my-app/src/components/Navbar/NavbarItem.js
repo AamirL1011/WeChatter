@@ -24,7 +24,7 @@ class NavbarItem extends React.Component {
     return (
       <ul className="nav">
         <li onClick={this.changeToHome}>
-          <a className="brand">WeChatter</a>
+          <a className="brand">WeChatter 1.0 Alpha</a>
         </li>
         <li onClick={this.changeToHome}>
           <a className="activePage">Home</a>
