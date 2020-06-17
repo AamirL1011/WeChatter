@@ -41,28 +41,50 @@ class AddMessageForm extends React.Component {
   render() {
     return (
       <div className="container-div">
-        <h2>Make A ChitChat</h2>
+
+        <div className={"row"}>
+          <div className={"col d-flex justify-content-center"}>
+            <h2>Make A ChitChat</h2>
+          </div>
+        </div>
+
+
         <div className="msgForm">
           <form onSubmit={this.handleSubmit}>
-            <div>
-              <label htmlFor="usernameBox">Username: </label>
-              <input
-                type="text"
-                id="usernameBox"
-                onChange={this.handleChangeUsr}
-                required="true"
-              />
+
+            <div className={"row"}>
+              <div className={"col-3"}>
+                <label htmlFor="usernameBox">Username: </label>
+              </div>
+              <div className={"col-9"}>
+                <input
+                  type="text"
+                  id="usernameBox"
+                  onChange={this.handleChangeUsr}
+                  required="true"
+                />
+              </div>
             </div>
-            <div>
-              <label htmlFor="msgBox">Message: </label>
-              <input
-                type="text"
-                id="msgBox"
-                onChange={this.handleChangeMsg}
-                required="true"
-              />
+
+            <div className={"row"}>
+              <div className={"col-3"}>
+                <label htmlFor="msgBox">Message: </label>
+              </div>
+              <div className={"col-9"}>
+                <input
+                  type="text"
+                  id="msgBox"
+                  onChange={this.handleChangeMsg}
+                  required="true"
+                />
+              </div>
             </div>
-            <button className="button_stuff">ChitChat</button>
+
+            <div className={"row"}>
+              <div className={"col d-flex justify-content-center"}>
+                <button className="button_stuff">ChitChat</button>
+              </div>
+            </div>
           </form>
         </div>
       </div>

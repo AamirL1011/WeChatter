@@ -4,6 +4,7 @@
     <list default="true" id="4fafe6ec-697d-4b95-91d8-93df152272aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/AddMessage/AddMessageForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/AddMessage/AddMessageForm.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1592360792144</updated>
       <workItem from="1592360794414" duration="17281000" />
-      <workItem from="1592429323185" duration="1090000" />
+      <workItem from="1592429323185" duration="1918000" />
     </task>
     <servers />
   </component>
