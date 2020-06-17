@@ -18,7 +18,7 @@ class MessageFeed extends React.Component {
       <div className="container-div" id="msgFeed">
         <h1>Message Feed</h1>
         <div className="msgFeed">
-          <ul id="msgList">{messageList}</ul>
+          <table id="msgList">{messageList}</table>
         </div>
       </div>
     );

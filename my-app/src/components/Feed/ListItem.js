@@ -8,7 +8,24 @@ class ListItem extends React.Component {
     const { value, delMsgID } = this.props;
     console.log("renderListItem popUpSeen:", this.props);
     return (
-      <span>
+
+      <tr>
+        <td>
+          {value}
+        </td>
+        <td>
+          <button
+            className="button_stuff righty"
+            onClick={() => {
+              this.props.delMsg(delMsgID);
+            }}
+          >
+            X
+          </button>
+        </td>
+      </tr>
+
+      /*{<span>
         <li>
           <button
             className="messageBtn"
@@ -27,7 +44,7 @@ class ListItem extends React.Component {
             X
           </button>
         </li>
-      </span>
+      </span>}*/
     );
   }
 }
