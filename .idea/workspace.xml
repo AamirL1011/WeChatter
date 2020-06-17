@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fafe6ec-697d-4b95-91d8-93df152272aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my-app/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Navbar/NavbarItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Navbar/NavbarItem.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +62,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592360792144</updated>
-      <workItem from="1592360794414" duration="2219000" />
+      <workItem from="1592360794414" duration="2357000" />
     </task>
     <servers />
   </component>

@@ -36,6 +36,6 @@ class NavbarItem extends React.Component {
 //state has entire state of app!!
 const mapStateToProps = (state) => { //name is by convention
     return { isHome: state.isHome }; //now it will appear as props
-}
+};
 
 export default connect(mapStateToProps, {changePageState})(NavbarItem);
