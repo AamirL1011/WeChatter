@@ -8,21 +8,21 @@ class Homepage extends React.Component {
   render() {
     return (
       <section className="container">
-        <br/>
-        <br/>
-        <div className={"row"}>
-          <div className={"col-1"}></div>
-          <div className={"col-10 d-flex justify-content-center"}>
+        <br />
+        <br />
+        <div className="row">
+          <div className="col-1" />
+          <div className="col-10 d-flex justify-content-center">
             <AddMessageForm />
           </div>
-          <div className={"col-1"}></div>
+          <div className="col-1" />
         </div>
-        <div className={"row"}>
-          <div className={"col-1"}></div>
-          <div className={"col-10 d-flex justify-content-center"}>
+        <div className="row">
+          <div className="col-1" />
+          <div className="col-10 d-flex justify-content-center">
             <MessageFeed />
           </div>
-          <div className={"col-1"}></div>
+          <div className="col-1" />
         </div>
       </section>
     );

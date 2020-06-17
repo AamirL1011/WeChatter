@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { connect } from "react-redux";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar/Navbar";
 import Homepage from "./views/HomePage/Homepage";
 import About from "./views/AboutPage/About";

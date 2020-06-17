@@ -6,7 +6,7 @@ import { addMsg } from "../../actions";
 class AddMessageForm extends React.Component {
   state = {
     msgBox: null,
-    usernameBox: null
+    usernameBox: null,
   };
 
   // updates local state of ChitChat message input box
@@ -15,6 +15,7 @@ class AddMessageForm extends React.Component {
       [e.target.id]: e.target.value,
     });
   };
+
   // updates local state of ChitChat username box
   handleChangeUsr = (e) => {
     this.setState({
@@ -49,12 +50,17 @@ class AddMessageForm extends React.Component {
                 type="text"
                 id="usernameBox"
                 onChange={this.handleChangeUsr}
-                required={"true"}
+                required="true"
               />
             </div>
             <div>
               <label htmlFor="msgBox">Message: </label>
-              <input type="text" id="msgBox" onChange={this.handleChangeMsg}  required={"true"} />
+              <input
+                type="text"
+                id="msgBox"
+                onChange={this.handleChangeMsg}
+                required="true"
+              />
             </div>
             <button className="button_stuff">ChitChat</button>
           </form>
