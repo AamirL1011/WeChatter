@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4fafe6ec-697d-4b95-91d8-93df152272aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/actions/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/AddMessage/AddMessageForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/AddMessage/AddMessageForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Feed/ListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Feed/ListItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Feed/MessageFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Feed/MessageFeed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Navbar/NavbarItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Navbar/NavbarItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/views/AboutPage/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/AboutPage/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/views/HomePage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/HomePage/Homepage.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +65,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592360792144</updated>
-      <workItem from="1592360794414" duration="15783000" />
+      <workItem from="1592360794414" duration="16462000" />
     </task>
     <servers />
   </component>

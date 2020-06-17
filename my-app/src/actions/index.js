@@ -1,44 +1,33 @@
+// action for making a new ChitChat
 export const addMsg = (msg) => {
-  console.log("addMsg action called:", msg);
   return {
     type: "ADD_MESSAGE",
     message: msg,
   };
 };
 
+// action for ChitChat deletion
 export const delMsg = (id) => {
-  console.log("delMsg action called with id:", id);
   return {
     type: "DELETE_MESSAGE",
     id,
   };
 };
 
+// action for changing the page view
 export const changePageState = (val) => {
-  console.log("changePageState action called with state:", val);
-
   if (val) {
-    console.log("home selected");
     return {
       type: "HOME_PAGE_SELECTED",
     };
   }
-  console.log("about selected");
   return {
     type: "ABOUT_PAGE_SELECTED",
   };
 };
 
-export const getDetails = (id) => {
-  console.log("getDetails action called with id:", id);
-  return {
-    type: "GET_DETAILS",
-    id,
-  };
-};
-
+// action for toggling ChitChat details popup
 export const togglePopup = (val) => {
-  console.log("togglePopup called");
   return {
     type: "TOGGLE_POPUP",
     id: val,

@@ -6,22 +6,25 @@ import { addMsg } from "../../actions";
 class AddMessageForm extends React.Component {
   state = {
     msgBox: null,
+    usernameBox: null
   };
 
+  // updates local state of ChitChat message input box
   handleChangeMsg = (e) => {
     this.setState({
       [e.target.id]: e.target.value,
     });
   };
-
+  // updates local state of ChitChat username box
   handleChangeUsr = (e) => {
     this.setState({
       [e.target.id]: e.target.value,
     });
   };
 
+  // handles ChitChat submission
   handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // prevents page refresh
     const newMessage = {
       message: this.state.msgBox,
       username: this.state.usernameBox,
