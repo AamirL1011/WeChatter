@@ -13,15 +13,18 @@ class ListItem extends React.Component {
         <td>
           {value}
         </td>
-        <td>
+        <td className={"delButtonRow"}>
           <button
-            className="button_stuff righty"
+            className="button_stuff"
             onClick={() => {
               this.props.delMsg(delMsgID);
             }}
           >
             X
           </button>
+        </td>
+        <td>
+          <p className={"transparentCol"}>..</p>
         </td>
       </tr>
 

@@ -13,28 +13,18 @@ body {
   font-weight: 600;
   padding: 1%;
   padding-top: 0%;
-  opacity: 90%;
   width: 100% !important;
+  opacity: 0%;
+  animation: navFadeIn 3s ease forwards;
 }
 
-.animationNav .navbarCustom {
-  animation-duration: 3s;
-  animation-name: navSlideIn;
-}
-
-.animationNav {
-  overflow: hidden;
-}
-
-@keyframes navSlideIn {
+@keyframes navFadeIn {
   from {
-    margin-left: 100%;
-    width: 300%;
+    opacity: 0%;
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    opacity: 90%;
   }
 }
 
@@ -90,8 +80,11 @@ body {
   font-weight: 600;
 }
 
+.transparentCol {
+  opacity: 0%;
+}
+
 .button_stuff{
-  position:relative;
   z-index: 2;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
@@ -139,7 +132,8 @@ body {
 }
 
 #msgList {
-  list-style-type: none;
+  padding-right: 100px;
+  width: 600px;
 }
 
 ul {
@@ -152,10 +146,6 @@ ul {
 
 #clearMsg {
   box-shadow: -2px 12px 17px -5px  #000000;
-}
-
-.righty {
-  float: right;
 }
 
 .messageBtn{
@@ -186,16 +176,17 @@ ul {
 }
 
 .containerAnimation .container-div {
+  opacity: 0%;
   animation-duration: 3s;
-  animation-name: contentSlideUp;
+  animation-name: contentFadeIn;
 }
 
-@keyframes contentSlideUp {
+@keyframes contentFadeIn {
   from {
-    margin-top: 100%;
+    opacity: 0%;
   }
 
   to {
-    margin-top: 0%;
+    opacity: 100%;
   }
 }
