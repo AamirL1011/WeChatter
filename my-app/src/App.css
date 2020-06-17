@@ -11,10 +11,12 @@ body {
 #navbar {
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
-  padding: 1%;
-  padding-top: 0%;
-  width: 100% !important;
+  padding-bottom: 100px;
+  margin-left: 1.66%;
+  width: 96.66% !important;
   opacity: 0%;
+  position: fixed;
+  z-index: 5;
   animation: navFadeIn 3s ease forwards;
 }
 
@@ -75,7 +77,11 @@ body {
   padding: 1%;
 }
 
-.container-div h1 {
+.input {
+  padding: 10px;
+}
+
+.container-div h2 {
   color: lightgray;
   font-weight: 600;
 }
@@ -163,12 +169,7 @@ ul {
 }
 
 .container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: center;
+
 }
 
 .containerAnimation {

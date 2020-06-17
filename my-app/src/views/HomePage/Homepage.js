@@ -3,14 +3,26 @@ import "../../App.css";
 import { connect } from "react-redux";
 import AddMessageForm from "../../components/AddMessage/AddMessageForm";
 import MessageFeed from "../../components/Feed/MessageFeed";
-import DetailedView from "../../components/Details/DetailedView";
 
 class Homepage extends React.Component {
   render() {
     return (
       <section className="container">
-        <AddMessageForm />
-        <MessageFeed />
+        <br/>
+        <div className={"row"}>
+          <div className={"col-2"}></div>
+          <div className={"col-8 d-flex justify-content-center"}>
+            <AddMessageForm />
+          </div>
+          <div className={"col-2"}></div>
+        </div>
+        <div className={"row"}>
+          <div className={"col-2"}></div>
+          <div className={"col-8 d-flex justify-content-center"}>
+            <MessageFeed />
+          </div>
+          <div className={"col-2"}></div>
+        </div>
       </section>
     );
   }

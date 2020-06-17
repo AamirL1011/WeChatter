@@ -39,21 +39,21 @@ class AddMessageForm extends React.Component {
   render() {
     return (
       <div className="container-div">
-        <h1>Make A ChitChat</h1>
+        <h2>Make A ChitChat</h2>
         <div className="msgForm">
-          <h3>Please complete the form:</h3>
           <form onSubmit={this.handleSubmit}>
             <div>
-              <label htmlFor="usernameBox">Username:</label>
+              <label htmlFor="usernameBox">Username: </label>
               <input
                 type="text"
                 id="usernameBox"
                 onChange={this.handleChangeUsr}
+                required={"true"}
               />
             </div>
             <div>
-              <label htmlFor="msgBox">Message:</label>
-              <input type="text" id="msgBox" onChange={this.handleChangeMsg} />
+              <label htmlFor="msgBox">Message: </label>
+              <input type="text" id="msgBox" onChange={this.handleChangeMsg}  required={"true"} />
             </div>
             <button className="button_stuff">ChitChat</button>
           </form>

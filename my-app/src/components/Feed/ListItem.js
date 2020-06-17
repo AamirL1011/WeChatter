@@ -60,7 +60,7 @@ class ListItem extends React.Component {
           </button>
         </td>
         <td>
-          <p className={"transparentCol"}>....</p>
+          <p className={"transparentCol"}>......</p>
         </td>
       </tr>
 
