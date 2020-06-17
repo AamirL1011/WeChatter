@@ -1,105 +1,133 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 
 const userStates = {
-	users: [
-		{username: 'PatrickStar', msgIds: [0]},
-		{username: 'SpongeBob', msgIds: [1,3]},
-		{username: 'WeirdAl', msgIds: [2]}
-	]
+  users: [
+    { username: "PatrickStar", msgIds: [0] },
+    { username: "SpongeBob", msgIds: [1, 3] },
+    { username: "WeirdAl", msgIds: [2] },
+  ],
 };
 
 const userReducer = (state = userStates, action) => {
-	console.log('userReducer called:', action.type);
-	if (action.type === 'ADD_MESSAGE') {
-		let newState = [...state.users];
-		let userExists = false;
-		for (let user of newState) {
-			if (user.username === action.message.username) {
-				userExists = true;
-				user.msgIds.push(action.message.id);
-			}
-		}
-		if (userExists === false) {
-			let newUser = {username: action.message.username, msgIds: [].push(action.message.id)};
-			newState.push(newUser);
-		}
-		console.log('newState', {users: newState});
-		return {users: newState};
-	} else if (action.type === 'DELETE_MESSAGE') {
-		let newState = [...state.users];
-		for (let user of newState) {
-			console.log('userReducer delMsg msgIds:', user.msgIds);
-			if (user.msgIds.includes(action.id)) {
-				const index = user.msgIds.indexOf(action.id);
-				if (index > -1) {
-					user.msgIds.splice(index, 1);
-				}
-			}
-		}
-		return {users: newState};
-	}
-	return state;
+  console.log("userReducer called:", action.type);
+  if (action.type === "ADD_MESSAGE") {
+    const newState = [...state.users];
+    let userExists = false;
+    for (const user of newState) {
+      if (user.username === action.message.username) {
+        userExists = true;
+        user.msgIds.push(action.message.id);
+      }
+    }
+    if (userExists === false) {
+      const newUser = {
+        username: action.message.username,
+        msgIds: [].push(action.message.id),
+      };
+      newState.push(newUser);
+    }
+    console.log("newState", { users: newState });
+    return { users: newState };
+  }
+  if (action.type === "DELETE_MESSAGE") {
+    const newState = [...state.users];
+    for (const user of newState) {
+      console.log("userReducer delMsg msgIds:", user.msgIds);
+      if (user.msgIds.includes(action.id)) {
+        const index = user.msgIds.indexOf(action.id);
+        if (index > -1) {
+          user.msgIds.splice(index, 1);
+        }
+      }
+    }
+    return { users: newState };
+  }
+  return state;
 };
 
-
 const popupToggle = {
-	popPresent: false,
-	popID: null
+  popPresent: false,
+  popID: null,
 };
 
 const toggleReducer = (state = popupToggle, action) => {
-	console.log('toggleReducer called:', action.type);
-	if (action.type === "TOGGLE_POPUP") {
-		console.log('togglePopup called with id:', action.id);
-		console.log('togglePopup called with state:', state.popPresent);
-		return {popPresent: !state.popPresent, popID: action.id};
-	} else return state;
+  console.log("toggleReducer called:", action.type);
+  if (action.type === "TOGGLE_POPUP") {
+    console.log("togglePopup called with id:", action.id);
+    console.log("togglePopup called with state:", state.popPresent);
+    return { popPresent: !state.popPresent, popID: action.id };
+  }
+  return state;
 };
 
 const pageState = {
-	isHome: 'true'
+  isHome: "true",
 };
 
 const pageReducer = (state = pageState, action) => {
-	console.log('pageReducer called:', action.type);
-	if (action.type === "HOME_PAGE_SELECTED") {
-		return {isHome: 'true'};
-	} else if (action.type === "ABOUT_PAGE_SELECTED") {
-		return {isHome: 'false'};
-	} else return state;
+  console.log("pageReducer called:", action.type);
+  if (action.type === "HOME_PAGE_SELECTED") {
+    return { isHome: "true" };
+  }
+  if (action.type === "ABOUT_PAGE_SELECTED") {
+    return { isHome: "false" };
+  }
+  return state;
 };
 
 const initialMessageState = {
-	messages: [
-		{message: "This isn't twitter!", username: "PatrickStar" , timestamp: new Date('December 17, 1995 03:24:00'), id: 0},
-		{message: "I've been duped into using this website!", username: "SpongeBob", timestamp: new Date('December 31, 1999 23:59:59'), id: 1},
-		{message: "This is the best fake twitter app ever! I give it 5 stars and will tell all my friends!", username: "WeirdAl", timestamp: new Date('July 07, 2002 12:15:56'), id: 2},
-		{message: "Phew, my project deadline is near!", username: "SpongeBob", timestamp: new Date('June 15, 2020 22:00:00'), id: 3}
-	]
+  messages: [
+    {
+      message: "This isn't twitter!",
+      username: "PatrickStar",
+      timestamp: new Date("December 17, 1995 03:24:00"),
+      id: 0,
+    },
+    {
+      message: "I've been duped into using this website!",
+      username: "SpongeBob",
+      timestamp: new Date("December 31, 1999 23:59:59"),
+      id: 1,
+    },
+    {
+      message:
+        "This is the best fake twitter app ever! I give it 5 stars and will tell all my friends!",
+      username: "WeirdAl",
+      timestamp: new Date("July 07, 2002 12:15:56"),
+      id: 2,
+    },
+    {
+      message: "Phew, my project deadline is near!",
+      username: "SpongeBob",
+      timestamp: new Date("June 15, 2020 22:00:00"),
+      id: 3,
+    },
+  ],
 };
 
 const messageReducer = (state = initialMessageState, action) => {
-	console.log('reducerAddMsg', state, action);
-	console.log('reducerAddMsgMessage', action.message);
-	console.log('reducerAddMsgState', state);
-	if (action.type === 'ADD_MESSAGE') {
-		let newState = [...state.messages, action.message];
-		console.log('newState', {messages: newState});
-		return {messages: newState};
-	} else if (action.type === 'DELETE_MESSAGE') {
-		let filteredMessages = state.messages.filter(message => { // evaluates to false if id matches then doesn't add it to array
-			return message.id !== action.id;
-		});
-		return {messages: filteredMessages};
-	}
-	return state;
+  console.log("reducerAddMsg", state, action);
+  console.log("reducerAddMsgMessage", action.message);
+  console.log("reducerAddMsgState", state);
+  if (action.type === "ADD_MESSAGE") {
+    const newState = [...state.messages, action.message];
+    console.log("newState", { messages: newState });
+    return { messages: newState };
+  }
+  if (action.type === "DELETE_MESSAGE") {
+    const filteredMessages = state.messages.filter((message) => {
+      // evaluates to false if id matches then doesn't add it to array
+      return message.id !== action.id;
+    });
+    return { messages: filteredMessages };
+  }
+  return state;
 };
 
-
 export default combineReducers({
-	messages: messageReducer,
-	isHome: pageReducer,
-	popupToggle: toggleReducer,
-	users: userReducer
-    // anotherKey: anotherReducer //all your reducers should be combined
+  messages: messageReducer,
+  isHome: pageReducer,
+  popupToggle: toggleReducer,
+  users: userReducer,
+  // anotherKey: anotherReducer //all your reducers should be combined
 });

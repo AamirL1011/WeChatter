@@ -2,8 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fafe6ec-697d-4b95-91d8-93df152272aa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/.prettierrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/public/loadMessageData.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/public/loadMessageData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/public/loadUserData.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/public/loadUserData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/AddMessage/AddMessageForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/AddMessage/AddMessageForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Details/DetailedView.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Details/DetailedView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Feed/ListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Feed/ListItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Feed/MessageFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Feed/MessageFeed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Navbar/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/Navbar/NavbarItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Navbar/NavbarItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/setupTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/views/AboutPage/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/AboutPage/About.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/views/HomePage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/HomePage/Homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +51,8 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\node_modules\prettier" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -62,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1592360792144</updated>
-      <workItem from="1592360794414" duration="2357000" />
+      <workItem from="1592360794414" duration="4446000" />
     </task>
     <servers />
   </component>
