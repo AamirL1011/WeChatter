@@ -7,6 +7,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Post messages to ChitChat with your friends and strangers! (Currently a work in progress)
 
+**New Features!**
+- Auth0 log-in integration (June 18, 2020)
+
 
 ## Available Scripts
 
