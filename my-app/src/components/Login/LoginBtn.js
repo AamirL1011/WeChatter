@@ -9,10 +9,10 @@ const LoginBtn = () => {
   return (
     <div>
       {!isAuthenticated && (
-        <Button variant={"dark"} onClick={() => loginWithRedirect({})}>Log in</Button>
+        <Button className={"loginBtn"} variant={"dark"} onClick={() => loginWithRedirect({})}>Log in</Button>
       )}
 
-      {isAuthenticated && <Button variant={"dark"} onClick={() => logout()}>Log out</Button>}
+      {isAuthenticated && <Button className={"loginBtn"} variant={"dark"} onClick={() => logout()}>Log out</Button>}
     </div>
   );
 };

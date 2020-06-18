@@ -136,8 +136,24 @@ body {
 }
 
 .loginBtnDiv {
-  padding: 1%;
+  padding: 1.5%;
   border-radius: 6px;
+}
+
+.loginBtn {
+  animation: shadowPulse 1.3s infinite;
+}
+
+@keyframes shadowPulse  {
+
+  from {
+    box-shadow: 0 0 1rem 13px #686868;
+  }
+
+  to {
+    box-shadow: 0 0 0.75rem 0px #686868;
+  }
+
 }
 
 .msgForm h3 {
