@@ -8,6 +8,7 @@ class Homepage extends React.Component {
   render() {
     return (
       <section className="container">
+        <div className={"pageContent"}>
         <br />
         <br />
         <div className="row">
@@ -23,6 +24,7 @@ class Homepage extends React.Component {
             <MessageFeed />
           </div>
           <div className="col-1" />
+        </div>
         </div>
       </section>
     );

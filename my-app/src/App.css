@@ -13,19 +13,23 @@ body {
   font-weight: 600;
   margin-left: 1.66%;
   width: 96.66% !important;
-  opacity: 0%;
+  opacity: 90%;
   position: fixed;
   z-index: 5;
-  animation: navFadeIn 3s ease forwards;
 }
 
-@keyframes navFadeIn {
+.pageContent {
+  opacity: 0%;
+  animation: fadeIn 1.0s ease forwards;
+}
+
+@keyframes fadeIn {
   from {
     opacity: 0%;
   }
 
   to {
-    opacity: 90%;
+    opacity: 100%;
   }
 }
 
@@ -54,7 +58,7 @@ body {
   color: #848484;
 }
 
-.navbarCustom li .activePage {
+.navbarCustom li .active {
   background-color: #646f73;
 }
 
@@ -104,6 +108,7 @@ body {
 }
 
 .delButton {
+    float: right;
   background-color: #8a9ba1;
   font-family: 'Open Sans', sans-serif;
   border-radius: 3px;

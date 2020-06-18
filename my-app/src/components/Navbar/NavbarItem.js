@@ -1,28 +1,22 @@
 import React from "react";
 import "../../App.css";
 import { connect } from "react-redux";
+import { Link, NavLink } from 'react-router-dom';
 import { changePageState } from "../../actions";
 
 class NavbarItem extends React.Component {
-  changeToHome = (e) => {
-    this.props.changePageState(true);
-  };
-
-  changeToAbout = (e) => {
-    this.props.changePageState(false);
-  };
 
   render() {
     return (
       <ul className="nav">
-        <li onClick={this.changeToHome}>
-          <a className="brand">WeChatter 1.0 Alpha</a>
+        <li>
+          <NavLink to={"/landing"} className="brand">WeChatter 1.0 Alpha</NavLink>
         </li>
-        <li onClick={this.changeToHome}>
-          <a className="activePage">Home</a>
+        <li>
+          <NavLink exact={"/"} to={"/"}>Home</NavLink>
         </li>
-        <li onClick={this.changeToAbout}>
-          <a>About</a>
+        <li>
+          <NavLink to={"/about"}>About</NavLink>
         </li>
       </ul>
     );

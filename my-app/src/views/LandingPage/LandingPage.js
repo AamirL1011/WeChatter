@@ -2,14 +2,17 @@ import React from "react";
 import "../../App.css";
 import { connect } from "react-redux";
 
-class LoginPage extends React.Component {
+class LandingPage extends React.Component {
   render() {
+    console.log(this.props);
     return (
       <section className="container">
         <div className={"pageContent"}>
         <br/>
         <br/>
-        <h6>Future Login Page (integration with Auth0 or Okta)</h6>
+        <div>
+          <h3>Future Landing Page after user logs in.</h3>
+        </div>
         </div>
       </section>
     );
@@ -24,4 +27,4 @@ const mapStateToProps = (state) => {
   }; // now it will appear as props
 };
 
-export default connect(mapStateToProps)(LoginPage);
+export default connect(mapStateToProps)(LandingPage);
