@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4fafe6ec-697d-4b95-91d8-93df152272aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Feed/MessageFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Feed/MessageFeed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Navbar/NavbarItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Navbar/NavbarItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/views/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/LandingPage/LandingPage.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +20,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1dQcWpYNGPddSblRexzNBFQdubn" />
