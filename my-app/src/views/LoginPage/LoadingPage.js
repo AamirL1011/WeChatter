@@ -12,7 +12,7 @@ const LoadingPage = (props) => {
         <div>
           <br/>
           <br/>
-          <h6>Page user sees right after logging in, redirected from Okta</h6>
+          <h6>Page user sees right after logging in, redirected from Auth0</h6>
         </div>
       </section>
     );

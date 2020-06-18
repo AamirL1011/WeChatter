@@ -12,10 +12,6 @@ import LoadingPage from "./views/LoginPage/LoadingPage";
 
 class App extends React.Component {
 
-  constructor() {
-    super();
-    const CALLBACK_PATH = "/implicit/callback";
-  }
 
   render() {
     return (
@@ -24,7 +20,7 @@ class App extends React.Component {
         <br />
         <div className="animationNav">
           <Navbar />
-          <Route exact path={"/"} component={Homepage} />
+          <Route exact={true} path={"/"} component={Homepage} />
           <Route path={"/landing"} component={LandingPage} />
           <Route path={"/about"} component={About} />
           <Route path={"/loading"} component={LoadingPage} />

@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fafe6ec-697d-4b95-91d8-93df152272aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my-app/src/reducers/messageReducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/reducers/userReducers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/views/LandingPage/LandingPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/views/LoginPage/LoadingPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/3.1.0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/public/temp.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Navbar/NavbarItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Navbar/NavbarItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/views/AboutPage/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/AboutPage/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/views/HomePage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/HomePage/Homepage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/views/LoginPage/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/LoginPage/LoginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/views/LoginPage/LoadingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/LoginPage/LoadingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,13 +36,14 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/my-app/src/views/LoginPage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\node_modules\prettier" />
   </component>
@@ -88,6 +83,7 @@
       <updated>1592360792144</updated>
       <workItem from="1592360794414" duration="17281000" />
       <workItem from="1592429323185" duration="10084000" />
+      <workItem from="1592461784656" duration="1501000" />
     </task>
     <servers />
   </component>
