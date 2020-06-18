@@ -25,6 +25,11 @@ const NavbarItem = () => {
               <NavLink to="/profile">Profile</NavLink>
             </li>
           )}
+        {isAuthenticated && (
+          <li>
+            <NavLink exact={true} to="/" onClick={() => logout()}>Log Out</NavLink>
+          </li>
+        )}
       </ul>
     );
 };
