@@ -1,3 +1,4 @@
+// Initial Chatter State
 const initialMessageState = {
   messages: [
     {
@@ -32,8 +33,10 @@ const initialMessageState = {
   ],
 };
 
+// Updates the message state to display on the Chatter Feed
 const messageReducer = (state = initialMessageState, action) => {
   if (action.type === "ADD_MESSAGE") {
+    // spread operator to copy msgs to new array, then push new msg
     const newState = [...state.messages, action.message];
     return { messages: newState };
   }

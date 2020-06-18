@@ -4,6 +4,9 @@ import { connect } from "react-redux";
 import { addMsg } from "../../actions";
 
 class AddMessageForm extends React.Component {
+
+  // local state, not stored in Redux (or MongoDB for future implementations).
+  // Other parts of the app don't need to know about it
   state = {
     usernameBox: "",
     avatarBox: "https://i.imgur.com/t5u33J6.png",

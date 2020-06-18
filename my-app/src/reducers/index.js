@@ -4,7 +4,7 @@ import messageReducer from "./messageReducers";
 
 
 
-// Message Details
+// Message Details Popup {likely to be deprecated in the near future}
 const popupToggle = {
   popPresent: false,
   popID: null,
@@ -17,25 +17,10 @@ const toggleReducer = (state = popupToggle, action) => {
   return state;
 };
 
-// Page State
-const pageState = {
-  isHome: "true",
-};
-
-const pageReducer = (state = pageState, action) => {
-  if (action.type === "HOME_PAGE_SELECTED") {
-    return { isHome: "true" };
-  }
-  if (action.type === "ABOUT_PAGE_SELECTED") {
-    return { isHome: "false" };
-  }
-  return state;
-};
 
 
 export default combineReducers({
   messages: messageReducer,
-  isHome: pageReducer,
   popupToggle: toggleReducer,
   users: userReducer,
   // anotherKey: anotherReducer //all your reducers should be combined

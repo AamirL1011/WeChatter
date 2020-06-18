@@ -2,6 +2,7 @@ import React from "react";
 import { useAuth0 } from "../../react-auth0-spa";
 import Button from "react-bootstrap/Button";
 
+// Login/Logout button
 const LoginBtn = () => {
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 

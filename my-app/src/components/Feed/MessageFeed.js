@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import ListItem from "./components/ListItem";
 
 class MessageFeed extends React.Component {
+  // renders ChitChats to Chatter feed
   render() {
     const { messages } = this.props;
     const messageList = messages.map((message) => (

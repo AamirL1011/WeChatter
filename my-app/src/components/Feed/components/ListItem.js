@@ -6,6 +6,9 @@ import ChitChatItem from "./ChitChatItem";
 import { delMsg, togglePopup } from "../../../actions";
 
 class ListItem extends React.Component {
+  // finds the ChitChat that needs to be rendered
+  // then renders it
+  // Also renders the ChitChat details popup in an overlay
   render() {
     const { value, delMsgID, messages } = this.props;
     const filteredMessage = messages.filter((message) => {

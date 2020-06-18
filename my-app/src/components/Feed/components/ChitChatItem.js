@@ -3,6 +3,7 @@ import "../../../App.css";
 import moment from "moment";
 
 class ChitChatItem extends React.Component {
+  // renders the ChitChat contents
   render() {
     const { message } = this.props;
     console.log("chitchatitem:", this.props);

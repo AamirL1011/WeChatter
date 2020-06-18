@@ -6,16 +6,21 @@ const userStates = {
   ],
 };
 
+// Updates user message profile, msgIds are added to the user when a new ChitChat is made
 const userReducer = (state = userStates, action) => {
   if (action.type === "ADD_MESSAGE") {
     const newState = [...state.users];
     let userExists = false;
+    // search for the username from the new ChitChat in the user state
+    // if it exists, set userExists to true, and we can simply push the new msgID to the user
     for (const user of newState) {
       if (user.username === action.message.username) {
         userExists = true;
         user.msgIds.push(action.message.id);
       }
     }
+    // handle case where we have a new user
+    // creates new user --> username and msgId object
     if (userExists === false) {
       let newArr = [];
       newArr.push(action.message.id);
@@ -31,7 +36,9 @@ const userReducer = (state = userStates, action) => {
   if (action.type === "DELETE_MESSAGE") {
     const newState = [...state.users];
     for (const user of newState) {
-      console.log("userReducer delete:", user);
+      // if the we can find the msg ID we need to delete in a user's state
+      // then get the index in the array of that id and delete it from the
+      // msgID array
       if (user.msgIds.includes(action.id)) {
         const index = user.msgIds.indexOf(action.id);
         if (index > -1) {

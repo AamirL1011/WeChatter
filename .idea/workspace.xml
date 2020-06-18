@@ -3,8 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="4fafe6ec-697d-4b95-91d8-93df152272aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/public/temp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/AddMessage/AddMessageForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/AddMessage/AddMessageForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Feed/MessageFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Feed/MessageFeed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Feed/components/ChitChatItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Feed/components/ChitChatItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Feed/components/ListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Feed/components/ListItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Login/LoginBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Login/LoginBtn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Navbar/Navbar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/Navbar/NavbarItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Navbar/NavbarItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/views/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/LandingPage/LandingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/UserProfile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/ProfilePage/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/reducers/messageReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/reducers/messageReducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/reducers/userReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/reducers/userReducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/views/LoginPage/LoadingPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/views/LoginPage/LoginPage.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,15 +61,15 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\node_modules\prettier" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\src\views\LoginPage" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\my-app\src\views\ProfilePage" />
       <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\my-app\src\components\Feed\components" />
       <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\src\views\HomePage" />
       <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\src\views\AboutPage" />
       <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\src\components\Feed" />
-      <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\src\components\AddMessage" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\src\views\LoginPage" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -84,6 +97,7 @@
       <workItem from="1592360794414" duration="17281000" />
       <workItem from="1592429323185" duration="10084000" />
       <workItem from="1592461784656" duration="1769000" />
+      <workItem from="1592479150388" duration="1656000" />
     </task>
     <servers />
   </component>

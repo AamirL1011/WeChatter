@@ -8,9 +8,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Homepage from "./views/HomePage/Homepage";
 import About from "./views/AboutPage/About";
 import LandingPage from "./views/LandingPage/LandingPage";
-import LoadingPage from "./views/LoginPage/LoadingPage";
 import Switch from "react-bootstrap/cjs/Switch";
-import Profile from "./components/UserProfile/Profile";
+import Profile from "./views/ProfilePage/Profile";
 import history from "./utils/history";
 
 
@@ -27,7 +26,6 @@ const App = () => {
             <Route exact={true} path={"/"} component={LandingPage} />
             <Route path={"/home"} component={Homepage} />
             <Route path={"/about"} component={About} />
-            <Route path={"/loading"} component={LoadingPage} />
             <Route path="/profile" component={Profile} />
           </Switch>
         </div>

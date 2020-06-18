@@ -1,9 +1,10 @@
 import React from "react";
 import "../../App.css";
 import { Link, NavLink } from 'react-router-dom';
-import Profile from "../UserProfile/Profile";
+import Profile from "../../views/ProfilePage/Profile";
 import { useAuth0 } from "../../react-auth0-spa";
 
+// Conditionally renders certain Navbar links based on user authentication
 const NavbarItem = () => {
 
     const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
