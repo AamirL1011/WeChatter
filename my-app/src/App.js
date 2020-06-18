@@ -1,6 +1,7 @@
 import React from "react";
-import { connect } from "react-redux";
-import { BrowserRouter as Router, Route, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { useAuth0 } from "./react-auth0-spa";
+import LoginBtn from "./components/Login/LoginBtn";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar/Navbar";
@@ -8,33 +9,33 @@ import Homepage from "./views/HomePage/Homepage";
 import About from "./views/AboutPage/About";
 import LandingPage from "./views/LandingPage/LandingPage";
 import LoadingPage from "./views/LoginPage/LoadingPage";
+import Switch from "react-bootstrap/cjs/Switch";
+import Profile from "./components/UserProfile/Profile";
+import history from "./utils/history";
 
 
-class App extends React.Component {
+const App = () => {
 
-
-  render() {
     return (
-      <Router>
+      <Router history={history}>
       <div className="App">
-        <br />
         <div className="animationNav">
+          <br/>
           <Navbar />
-          <Route exact={true} path={"/"} component={Homepage} />
-          <Route path={"/landing"} component={LandingPage} />
-          <Route path={"/about"} component={About} />
-          <Route path={"/loading"} component={LoadingPage} />
+          <br/>
+          <Switch>
+            <Route exact={true} path={"/"} component={LandingPage} />
+            <Route path={"/home"} component={Homepage} />
+            <Route path={"/about"} component={About} />
+            <Route path={"/loading"} component={LoadingPage} />
+            <Route path="/profile" component={Profile} />
+          </Switch>
         </div>
       </div>
       </Router>
     );
-  }
-}
-
-// state has entire state of app!!
-const mapStateToProps = (state) => {
-  // name is by convention
-  return { isHome: state.isHome }; // now it will appear as props
 };
 
-export default connect(mapStateToProps)(App);
+
+
+export default App;

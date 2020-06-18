@@ -1,30 +1,44 @@
 import React from "react";
 import "../../App.css";
-import { connect } from "react-redux";
+import { useAuth0 } from "../../react-auth0-spa";
+import LoginBtn from "../../components/Login/LoginBtn";
+import Spinner from "react-bootstrap/Spinner";
 
-class LandingPage extends React.Component {
-  render() {
-    console.log(this.props);
+const LandingPage = () => {
+
+  const { loading, isAuthenticated, loginWithRedirect } = useAuth0();
+
+  if (loading) {
+    return <div>
+      <br/>
+      <br/>
+      <Spinner animation="border" variant="warning" />
+      Loading...
+    </div>;
+  }
+
+
     return (
       <section className="container">
         <div className={"pageContent"}>
         <br/>
         <br/>
         <div>
-          <h3>Future Landing Page after user logs in.</h3>
+          {isAuthenticated && (
+            <div></div>
+          )}
         </div>
+          <div className={"row"}>
+            <div className={"col d-flex justify-content-center"}>
+              <div className={"bg-secondary loginBtnDiv"}>
+                <LoginBtn/>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     );
-  }
-}
-
-// state has entire state of app!!
-const mapStateToProps = (state) => {
-  // name is by convention
-  return {
-
-  }; // now it will appear as props
 };
 
-export default connect(mapStateToProps)(LandingPage);
+
+export default LandingPage;

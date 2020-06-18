@@ -135,6 +135,10 @@ body {
   opacity: 95%;
 }
 
+.loginBtnDiv {
+  padding: 1%;
+  border-radius: 6px;
+}
 
 .msgForm h3 {
   margin-top: 0px;
