@@ -1,7 +1,7 @@
 import React from "react";
 import "../../App.css";
 import { connect } from "react-redux";
-import ListItem from "./ListItem";
+import ListItem from "./components/ListItem";
 
 class MessageFeed extends React.Component {
   render() {

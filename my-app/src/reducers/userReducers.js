@@ -17,9 +17,12 @@ const userReducer = (state = userStates, action) => {
       }
     }
     if (userExists === false) {
+      let newArr = [];
+      newArr.push(action.message.id);
+      let newUsrName = action.message.username;
       const newUser = {
-        username: action.message.username,
-        msgIds: [].push(action.message.id),
+        username: newUsrName,
+        msgIds: newArr,
       };
       newState.push(newUser);
     }
@@ -28,6 +31,7 @@ const userReducer = (state = userStates, action) => {
   if (action.type === "DELETE_MESSAGE") {
     const newState = [...state.users];
     for (const user of newState) {
+      console.log("userReducer delete:", user);
       if (user.msgIds.includes(action.id)) {
         const index = user.msgIds.indexOf(action.id);
         if (index > -1) {

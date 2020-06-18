@@ -6,6 +6,7 @@ import { addMsg } from "../../actions";
 class AddMessageForm extends React.Component {
   state = {
     usernameBox: "",
+    avatarBox: "https://i.imgur.com/t5u33J6.png",
     msgBox: "",
   };
 
@@ -23,12 +24,20 @@ class AddMessageForm extends React.Component {
     });
   };
 
+  // updates local state of ChitChat avatar box
+  handleChangeAvatar = (e) => {
+    this.setState({
+      [e.target.id]: e.target.value,
+    });
+  };
+
   // handles ChitChat submission
   handleSubmit = (e) => {
     e.preventDefault(); // prevents page refresh
     const newMessage = {
       message: this.state.msgBox,
       username: this.state.usernameBox,
+      avatar: this.state.avatarBox,
       timestamp: null,
       id: null,
     };
@@ -53,11 +62,12 @@ class AddMessageForm extends React.Component {
           <form onSubmit={this.handleSubmit}>
 
             <div className={"row"}>
-              <div className={"col-3"}>
+              <div className={"col-4"}>
                 <label htmlFor="usernameBox">Username: </label>
               </div>
-              <div className={"col-9"}>
+              <div className={"col-8"}>
                 <input
+                  className={"inputBox"}
                   type="text"
                   id="usernameBox"
                   onChange={this.handleChangeUsr}
@@ -67,11 +77,28 @@ class AddMessageForm extends React.Component {
             </div>
 
             <div className={"row"}>
-              <div className={"col-3"}>
+              <div className={"col-4"}>
+                <label htmlFor="avatarBox">Profile Img URL: </label>
+              </div>
+              <div className={"col-8"}>
+                <input
+                  className={"inputBox"}
+                  type="text"
+                  id="avatarBox"
+                  onChange={this.handleChangeAvatar}
+                  defaultValue={"https://i.imgur.com/t5u33J6.png"}
+                  required
+                />
+              </div>
+            </div>
+
+            <div className={"row"}>
+              <div className={"col-4"}>
                 <label htmlFor="msgBox">Message: </label>
               </div>
-              <div className={"col-9"}>
+              <div className={"col-8"}>
                 <input
+                  className={"inputBox"}
                   type="text"
                   id="msgBox"
                   onChange={this.handleChangeMsg}

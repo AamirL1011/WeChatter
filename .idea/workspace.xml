@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fafe6ec-697d-4b95-91d8-93df152272aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my-app/3.1.0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/public/temp.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/components/Feed/components/ChitChatItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/views/LoginPage/LoadingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/LoginPage/LoadingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/public/temp.txt" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/public/temp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/AddMessage/AddMessageForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/AddMessage/AddMessageForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Feed/ListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Feed/components/ListItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Feed/MessageFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Feed/MessageFeed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/reducers/messageReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/reducers/messageReducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/reducers/userReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/reducers/userReducers.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,15 +51,15 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\node_modules\prettier" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\src\views\LoginPage" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\my-app\src\components\Feed\components" />
       <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\src\views\HomePage" />
       <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\src\views\AboutPage" />
       <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\src\components\Feed" />
       <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\src\components\AddMessage" />
-      <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\src\components\Details" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\src\views\LoginPage" />
     </key>
   </component>
   <component name="RunDashboard">
