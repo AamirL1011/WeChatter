@@ -14,15 +14,25 @@ const LandingPage = (props) => {
     return <div>
       <br/>
       <br/>
-      <Spinner animation="border" variant="warning" />
-      Please wait while we are personalizing your settings...
+      <br/>
+      <br/>
+      <div className={"row"}>
+        <div className={"col d-flex justify-content-center align-items-center"}>
+          <Spinner animation="border" variant="warning" />
+        </div>
+      </div>
+      <div className={"row"}>
+        <div className={"col d-flex justify-content-center align-items-center"}>
+          <h2>Please wait while we are personalizing your settings...</h2>
+        </div>
+      </div>
     </div>;
   }
 
     if (isAuthenticated) {
       setTimeout(() => {
         props.history.push('/home');
-      }, 6000);
+      }, 7000);
     }
 
     return (
