@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fafe6ec-697d-4b95-91d8-93df152272aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/my-app/public/WeChatter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/Branding/Branding.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/Branding/IntroAnimation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-app/src/components/Login/LoginForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Login/LoginBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Login/LoginBtn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Branding/Branding.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Branding/Branding.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/views/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/LandingPage/LandingPage.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,7 +89,7 @@
       <workItem from="1592479150388" duration="1808000" />
       <workItem from="1592481084512" duration="1969000" />
       <workItem from="1592766635024" duration="2546000" />
-      <workItem from="1592779319757" duration="5165000" />
+      <workItem from="1592779319757" duration="7059000" />
     </task>
     <servers />
   </component>

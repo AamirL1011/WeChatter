@@ -22,7 +22,7 @@ const LandingPage = (props) => {
     if (isAuthenticated) {
       setTimeout(() => {
         props.history.push('/home');
-      }, 4000);
+      }, 6000);
     }
 
     return (
