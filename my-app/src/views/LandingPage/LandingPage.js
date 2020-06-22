@@ -3,17 +3,19 @@ import "../../App.css";
 import { useAuth0 } from "../../react-auth0-spa";
 import LoginBtn from "../../components/Login/LoginBtn";
 import Spinner from "react-bootstrap/Spinner";
+import IntroAnimation from "../../components/Branding/IntroAnimation";
+import LoginForm from "../../components/Login/LoginForm";
 
 const LandingPage = (props) => {
 
-  const { loading, isAuthenticated, loginWithRedirect } = useAuth0();
+  const { loading, isAuthenticated } = useAuth0();
 
   if (loading) {
     return <div>
       <br/>
       <br/>
       <Spinner animation="border" variant="warning" />
-      Loading...
+      Please wait while we are personalizing your settings...
     </div>;
   }
 
@@ -26,47 +28,36 @@ const LandingPage = (props) => {
     return (
       <section className="container">
         <div className={"pageContent"}>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <div className={"row"}>
-          <div className={"col d-flex justify-content-center"}>
-            {!isAuthenticated && (
-              <div className={"text-light"}>
-                <h1>Please Log In</h1>
+          <div className={"row"}>
+            <div className={"col-4 brandLogo"}>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <img src="WeChatter.png" width="300px" height="400px" alt="" />
+              <br/>
+              <br/>
+            </div>
+            <div className={"col-8 brandAnim d-flex justify-content-center align-items-center"}>
+              <span>
+                <IntroAnimation/>
+                <hr id="mottoDiv" />
+                <div className="text-light">
+                <h2 id={"mottoSpan"}>
+                  <span id="motto1">Chat more,</span>
+                  <span id="motto2"> together.</span>
+                </h2>
               </div>
-            )}
-          </div>
-        </div>
-          <div className={"row"}>
-            <div className={"col d-flex justify-content-center"}>
-              <div className={"bg-secondary loginBtnDiv"}>
-                <LoginBtn/>
-              </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <LoginForm/>
+              </span>
             </div>
           </div>
-          <br/>
-          <div className={"row"}>
-            <div className={"col d-flex justify-content-center"}>
-              {isAuthenticated && (
-                <div className={"text-light"}>
-                  <h1>You will be redirected shortly.</h1>
-                </div>
-              )}
-            </div>
-          </div>
-          <div className={"row"}>
-            <div className={"col d-flex justify-content-center"}>
-              {isAuthenticated && (
-                <div className={"text-light"}>
-                  <Spinner animation="border" variant="warning" />
-                </div>
-              )}
-            </div>
-          </div>
+
+
         </div>
       </section>
     );
