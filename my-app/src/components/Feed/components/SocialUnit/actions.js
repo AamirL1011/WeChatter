@@ -2,6 +2,6 @@
 export const addHeart = (payload) => {
   return {
     type: "ADD_HEART",
-    payload: payload,
+    payload,
   };
 };

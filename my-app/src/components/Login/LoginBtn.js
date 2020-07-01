@@ -1,6 +1,6 @@
 import React from "react";
-import { useAuth0 } from "../../react-auth0-spa";
 import Button from "react-bootstrap/Button";
+import { useAuth0 } from "../../react-auth0-spa";
 
 // Login-Logout button
 const LoginBtn = () => {
@@ -9,10 +9,26 @@ const LoginBtn = () => {
   return (
     <div>
       {!isAuthenticated && (
-        <Button size={"lg"} className={"loginBtn"} variant={"dark"} onClick={() => loginWithRedirect({})}>Log in</Button>
+        <Button
+          size="lg"
+          className="loginBtn"
+          variant="dark"
+          onClick={() => loginWithRedirect({})}
+        >
+          Log in
+        </Button>
       )}
 
-      {isAuthenticated && <Button size={"lg"} className={"loginBtn"} variant={"dark"} onClick={() => logout()}>Log out</Button>}
+      {isAuthenticated && (
+        <Button
+          size="lg"
+          className="loginBtn"
+          variant="dark"
+          onClick={() => logout()}
+        >
+          Log out
+        </Button>
+      )}
     </div>
   );
 };

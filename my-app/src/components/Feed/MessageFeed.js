@@ -16,8 +16,8 @@ class MessageFeed extends React.Component {
     ));
     return (
       <div className="container-div" id="msgFeed">
-        <div className={"row"}>
-          <div className={"col d-flex justify-content-center"}>
+        <div className="row">
+          <div className="col d-flex justify-content-center">
             <h2>Chatter</h2>
           </div>
         </div>

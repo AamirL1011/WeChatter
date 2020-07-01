@@ -11,26 +11,29 @@ class ChitChatItem extends React.Component {
     return (
       <div className="container-div">
         <div className="chitchatItem">
-          <div className={"row"}>
-            <div className={"col-2"}>
-              <img className={"avatarImg"} src={message[0].avatar} alt=""/>
+          <div className="row">
+            <div className="col-2">
+              <img className="avatarImg" src={message[0].avatar} alt="" />
             </div>
-            <div className={"col-7"}>
-              <em><strong>{message[0].username}</strong> ChitChat'd:</em>
+            <div className="col-7">
+              <em>
+                <strong>{message[0].username}</strong> ChitChat'd:
+              </em>
               <p>{message[0].message}</p>
             </div>
-            <div className={"col-3"}>
+            <div className="col-3">
               {moment(message[0].timestamp).fromNow()}
             </div>
           </div>
-          <div className={"row"}>
-            <div className={"col"}>
-              <br/>
-              <SocialUnit messageID={message[0].id}
-                          name={message[0].username}
-                          heartNum={message[0].hearts}
+          <div className="row">
+            <div className="col">
+              <br />
+              <SocialUnit
+                messageID={message[0].id}
+                name={message[0].username}
+                heartNum={message[0].hearts}
               />
-              <hr/>
+              <hr />
             </div>
           </div>
         </div>
@@ -38,6 +41,5 @@ class ChitChatItem extends React.Component {
     );
   }
 }
-
 
 export default ChitChatItem;

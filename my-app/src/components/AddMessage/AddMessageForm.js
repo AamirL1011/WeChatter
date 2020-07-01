@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import { addMsg } from "../../actions";
 
 class AddMessageForm extends React.Component {
-
   // local state, not stored in Redux (or MongoDB for future implementations).
   // Other parts of the app don't need to know about it
   state = {
@@ -42,6 +41,8 @@ class AddMessageForm extends React.Component {
       username: this.state.usernameBox,
       avatar: this.state.avatarBox,
       timestamp: null,
+      hearts: 0,
+      heartsGivenBy: [],
       id: null,
     };
     newMessage.id = Math.random();
@@ -53,24 +54,21 @@ class AddMessageForm extends React.Component {
   render() {
     return (
       <div className="container-div addMessageDiv">
-
-        <div className={"row"}>
-          <div className={"col d-flex justify-content-center"}>
+        <div className="row">
+          <div className="col d-flex justify-content-center">
             <h2>Make A ChitChat</h2>
           </div>
         </div>
 
-
         <div className="msgForm">
           <form onSubmit={this.handleSubmit}>
-
-            <div className={"row"}>
-              <div className={"col-5"}>
+            <div className="row">
+              <div className="col-5">
                 <label htmlFor="usernameBox">Username: </label>
               </div>
-              <div className={"col-7"}>
+              <div className="col-7">
                 <input
-                  className={"inputBox"}
+                  className="inputBox"
                   type="text"
                   id="usernameBox"
                   onChange={this.handleChangeUsr}
@@ -79,29 +77,29 @@ class AddMessageForm extends React.Component {
               </div>
             </div>
 
-            <div className={"row"}>
-              <div className={"col-5"}>
+            <div className="row">
+              <div className="col-5">
                 <label htmlFor="avatarBox">Profile Img URL: </label>
               </div>
-              <div className={"col-7"}>
+              <div className="col-7">
                 <input
-                  className={"inputBox"}
+                  className="inputBox"
                   type="text"
                   id="avatarBox"
                   onChange={this.handleChangeAvatar}
-                  defaultValue={"https://i.imgur.com/t5u33J6.png"}
+                  defaultValue="https://i.imgur.com/t5u33J6.png"
                   required
                 />
               </div>
             </div>
 
-            <div className={"row"}>
-              <div className={"col-5"}>
+            <div className="row">
+              <div className="col-5">
                 <label htmlFor="msgBox">Message: </label>
               </div>
-              <div className={"col-7"}>
+              <div className="col-7">
                 <input
-                  className={"inputBox"}
+                  className="inputBox"
                   type="text"
                   id="msgBox"
                   onChange={this.handleChangeMsg}
@@ -110,8 +108,8 @@ class AddMessageForm extends React.Component {
               </div>
             </div>
 
-            <div className={"row"}>
-              <div className={"col d-flex justify-content-center"}>
+            <div className="row">
+              <div className="col d-flex justify-content-center">
                 <button className="button_stuff">ChitChat</button>
               </div>
             </div>

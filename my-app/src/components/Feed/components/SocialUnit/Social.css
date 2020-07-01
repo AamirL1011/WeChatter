@@ -15,3 +15,7 @@
 .heartButton:focus {
   outline:0;
 }
+
+.socialHeartNum{
+  margin-left: -10px;
+}

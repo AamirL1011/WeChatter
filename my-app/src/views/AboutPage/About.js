@@ -6,18 +6,18 @@ class About extends React.Component {
   render() {
     return (
       <section className="container">
-        <div className={"pageContent"}>
-        <div id="about" className="container-div">
-          <br />
-          <br />
-          <h2>About the Developer</h2>
-          <div className="msgFeed">
-            <p>Hi! I am a 3rd year computer science student.</p>
-            <p>
-              This is a React web app where you can post the latest chatter!
-            </p>
+        <div className="pageContent">
+          <div id="about" className="container-div">
+            <br />
+            <br />
+            <h2>About the Developer</h2>
+            <div className="msgFeed">
+              <p>Hi! I am a 3rd year computer science student.</p>
+              <p>
+                This is a React web app where you can post the latest chatter!
+              </p>
+            </div>
           </div>
-        </div>
         </div>
       </section>
     );

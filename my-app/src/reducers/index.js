@@ -16,8 +16,6 @@ const toggleReducer = (state = popupToggle, action) => {
   return state;
 };
 
-
-
 export default combineReducers({
   messages: messageReducer,
   popupToggle: toggleReducer,

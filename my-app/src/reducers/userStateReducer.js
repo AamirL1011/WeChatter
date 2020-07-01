@@ -1,5 +1,5 @@
 export const currentUserState = {
-  currentUserID: "patrickstar@gmail.com"
+  currentUserID: "patrickstar@gmail.com",
 };
 
 const userStateReducer = (state = currentUserState, action) => {

@@ -22,9 +22,9 @@ const userReducer = (state = userStates, action) => {
     // handle case where we have a new user
     // creates new user --> username and msgId object
     if (userExists === false) {
-      let newArr = [];
+      const newArr = [];
       newArr.push(action.message.id);
-      let newUsrName = action.message.username;
+      const newUsrName = action.message.username;
       const newUser = {
         username: newUsrName,
         msgIds: newArr,
