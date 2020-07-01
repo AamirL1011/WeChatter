@@ -52,7 +52,7 @@ class AddMessageForm extends React.Component {
 
   render() {
     return (
-      <div className="container-div">
+      <div className="container-div addMessageDiv">
 
         <div className={"row"}>
           <div className={"col d-flex justify-content-center"}>
@@ -65,10 +65,10 @@ class AddMessageForm extends React.Component {
           <form onSubmit={this.handleSubmit}>
 
             <div className={"row"}>
-              <div className={"col-4"}>
+              <div className={"col-5"}>
                 <label htmlFor="usernameBox">Username: </label>
               </div>
-              <div className={"col-8"}>
+              <div className={"col-7"}>
                 <input
                   className={"inputBox"}
                   type="text"
@@ -80,10 +80,10 @@ class AddMessageForm extends React.Component {
             </div>
 
             <div className={"row"}>
-              <div className={"col-4"}>
+              <div className={"col-5"}>
                 <label htmlFor="avatarBox">Profile Img URL: </label>
               </div>
-              <div className={"col-8"}>
+              <div className={"col-7"}>
                 <input
                   className={"inputBox"}
                   type="text"
@@ -96,10 +96,10 @@ class AddMessageForm extends React.Component {
             </div>
 
             <div className={"row"}>
-              <div className={"col-4"}>
+              <div className={"col-5"}>
                 <label htmlFor="msgBox">Message: </label>
               </div>
-              <div className={"col-8"}>
+              <div className={"col-7"}>
                 <input
                   className={"inputBox"}
                   type="text"

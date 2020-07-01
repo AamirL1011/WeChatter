@@ -1,6 +1,7 @@
 import React from "react";
 import "../../../App.css";
 import moment from "moment";
+import SocialUnit from "./SocialUnit/SocialUnit";
 
 class ChitChatItem extends React.Component {
   // renders the ChitChat contents
@@ -20,6 +21,16 @@ class ChitChatItem extends React.Component {
             </div>
             <div className={"col-3"}>
               {moment(message[0].timestamp).fromNow()}
+            </div>
+          </div>
+          <div className={"row"}>
+            <div className={"col"}>
+              <br/>
+              <SocialUnit messageID={message[0].id}
+                          name={message[0].username}
+                          heartNum={message[0].hearts}
+              />
+              <hr/>
             </div>
           </div>
         </div>

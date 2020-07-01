@@ -6,6 +6,8 @@ const initialMessageState = {
       username: "PatrickStar",
       avatar: "https://i.imgur.com/18KrOIv.jpg",
       timestamp: new Date("June 17, 2020 06:24:00"),
+      hearts: 5,
+      heartsGivenBy: [],
       id: 0,
     },
     {
@@ -13,6 +15,8 @@ const initialMessageState = {
       username: "SpongeBob",
       avatar: "https://i.imgur.com/KZObNVn.jpg",
       timestamp: new Date("May 28, 2020 23:01:59"),
+      hearts: 22,
+      heartsGivenBy: [],
       id: 1,
     },
     {
@@ -21,6 +25,8 @@ const initialMessageState = {
       username: "WeirdAl",
       avatar: "https://i.imgur.com/wAy6yQt.jpg",
       timestamp: new Date("January 07, 2020 12:15:56"),
+      hearts: 951,
+      heartsGivenBy: [],
       id: 2,
     },
     {
@@ -28,6 +34,8 @@ const initialMessageState = {
       username: "SpongeBob",
       avatar: "https://i.imgur.com/KZObNVn.jpg",
       timestamp: new Date("February 20, 2003 22:00:00"),
+      hearts: 1357,
+      heartsGivenBy: [],
       id: 3,
     },
   ],

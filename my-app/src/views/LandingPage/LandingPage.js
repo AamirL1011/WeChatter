@@ -1,7 +1,6 @@
 import React from "react";
 import "../../App.css";
 import { useAuth0 } from "../../react-auth0-spa";
-import LoginBtn from "../../components/Login/LoginBtn";
 import Spinner from "react-bootstrap/Spinner";
 import IntroAnimation from "../../components/Branding/IntroAnimation";
 import LoginForm from "../../components/Login/LoginForm";
@@ -11,7 +10,7 @@ const LandingPage = (props) => {
   const { loading, isAuthenticated } = useAuth0();
 
   if (loading) {
-    return <div>
+    return <div className={"loadingDiv"}>
       <br/>
       <br/>
       <br/>

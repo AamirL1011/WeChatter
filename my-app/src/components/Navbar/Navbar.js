@@ -1,6 +1,6 @@
 import React from "react";
 import "../../App.css";
-import NavbarItem from "./NavbarItem";
+import NavbarItem from "./components/NavbarItem";
 
 class Navbar extends React.Component {
   // renders a list of Navbar Items

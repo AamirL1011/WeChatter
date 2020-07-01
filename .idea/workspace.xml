@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fafe6ec-697d-4b95-91d8-93df152272aa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/my-app/public/heart_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/public/heart_icon_selected.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-app/src/components/Feed/components/SocialUnit/SocialUnit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/AddMessage/AddMessageForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/AddMessage/AddMessageForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Feed/components/ChitChatItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Feed/components/ChitChatItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Navbar/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Navbar/NavbarItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Navbar/components/NavbarItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/reducers/messageReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/reducers/messageReducers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/views/HomePage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/HomePage/Homepage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/views/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/LandingPage/LandingPage.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,15 +60,15 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\node_modules\prettier" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\src\views\LoginPage" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\my-app\src\components\Navbar\components" />
       <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\my-app\src\views\ProfilePage" />
       <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\my-app\src\components\Feed\components" />
       <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\src\views\HomePage" />
       <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\src\views\AboutPage" />
-      <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\src\components\Feed" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Aamir\Documents\GitHub\WeChatter\WeChatter\my-app\src\views\LoginPage" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -88,7 +99,8 @@
       <workItem from="1592479150388" duration="1808000" />
       <workItem from="1592481084512" duration="1969000" />
       <workItem from="1592766635024" duration="2546000" />
-      <workItem from="1592779319757" duration="7686000" />
+      <workItem from="1592779319757" duration="9002000" />
+      <workItem from="1593579734383" duration="4054000" />
     </task>
     <servers />
   </component>

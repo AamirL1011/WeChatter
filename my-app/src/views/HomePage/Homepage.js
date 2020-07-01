@@ -9,8 +9,6 @@ class Homepage extends React.Component {
     return (
       <section className="container">
         <div className={"pageContent"}>
-        <br />
-        <br />
         <div className="row">
           <div className="col-1" />
           <div className="col-10 d-flex justify-content-center">
