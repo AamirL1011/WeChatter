@@ -1,0 +1,17 @@
+.heartButtonImg{
+  padding: 5px;
+}
+
+.heartButton{
+  border: transparent;
+  width: 60px;
+}
+
+.heartButton:active {
+  outline: none;
+  border: none;
+}
+
+.heartButton:focus {
+  outline:0;
+}

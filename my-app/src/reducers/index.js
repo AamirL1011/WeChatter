@@ -1,8 +1,7 @@
 import { combineReducers } from "redux";
 import userReducer from "./userReducers";
 import messageReducer from "./messageReducers";
-
-
+import userStateReducer from "./userStateReducer";
 
 // Message Details Popup {likely to be deprecated in the near future}
 const popupToggle = {
@@ -23,5 +22,6 @@ export default combineReducers({
   messages: messageReducer,
   popupToggle: toggleReducer,
   users: userReducer,
+  userState: userStateReducer,
   // anotherKey: anotherReducer //all your reducers should be combined
 });

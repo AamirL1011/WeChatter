@@ -1,5 +1,9 @@
 import React from "react";
 import "../../../../App.css";
+import "./Social.css";
+import { connect } from "react-redux";
+import { addHeart } from "./actions";
+
 
 class SocialUnit extends React.Component {
 
@@ -11,17 +15,17 @@ class SocialUnit extends React.Component {
   }
 
 
-  handleheart = (messageID) => {
+  handleHeart = (messageID) => {
     const { currUser } = this.props;
     let heartsToGive = -1;
-    if (!this.state.clapsGiven) {
+    if (!this.state.heartGiven) {
       heartsToGive = 1;
     }
     this.setState({
-      clapsGiven: !this.state.clapsGiven,
+      heartGiven: !this.state.heartGiven,
     });
     const info = { id: messageID, value: heartsToGive, donor: currUser};
-    //this.props.addClap(info);
+    this.props.addHeart(info);
   };
 
 
@@ -31,22 +35,26 @@ class SocialUnit extends React.Component {
       <div className="container-div bg-secondary">
         <div className="socialUnit">
           <div className={"row"}>
-            <div className={"col d-flex socialHeart justify-content-end align-items-center"}>
+            <div className={"col-1 d-flex socialHeart justify-content-start align-items-center"}>
               <button
                 className="heartButton"
                 onClick={() => this.handleHeart(messageID)}
-                style={{backgroundColor: (this.state.heartGiven)? "#d68b0d": "#FCA311"}}
+                style={{backgroundColor: "transparent"}}
               >
                 <img
                   className="heartButtonImg"
                   src={(this.state.heartGiven)? "heart_icon_selected.png" : "heart_icon.png"}
                   width="25px"
                   height="25px"
-                  style={{backgroundColor: (this.state.heartGiven)? "#d68b0d": "#FCA311"}}
+                  style={{backgroundColor: "transparent"}}
                   alt=""
                 />
-                {(heartNum >= 1000)? Number.parseFloat(heartNum/1000).toPrecision(2) + "k" : heartNum}
               </button>
+            </div>
+            <div className={"col-1 d-flex socialHeart justify-content-start align-items-center"}>
+              {(heartNum >= 1000)? Number.parseFloat(heartNum/1000).toPrecision(2) + "k" : heartNum}
+            </div>
+            <div className={"col-10 d-flex socialHeart justify-content-start align-items-center"}>
             </div>
           </div>
         </div>
@@ -55,5 +63,15 @@ class SocialUnit extends React.Component {
   }
 }
 
+// state has entire state of app!!
+const mapStateToProps = (state) => {
+  // name is by convention
+  return {
+    messages: state.messages.messages,
+    popupSeen: state.popupToggle.popPresent,
+    popupID: state.popupToggle.popID,
+    currUser: state.userState.currentUserID
+  }; // now it will appear as props
+};
 
-export default SocialUnit;
+export default connect(mapStateToProps, { addHeart })(SocialUnit);

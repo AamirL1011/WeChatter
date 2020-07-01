@@ -41,21 +41,70 @@ const initialMessageState = {
   ],
 };
 
+const HEART_LIMIT = 9999;
+
+
+// remove donor from heartsGivenBy for message
+const removeHeartDonor = (message, donor) => {
+  const index = message.heartsGivenBy.indexOf(donor);
+  if (index > -1) {
+    message.heartsGivenBy.splice(index, 1);
+  }
+};
+
+// heart handler helper
+const doHeart = (msg, action, newMessages) => {
+  msg.hearts += Number(action.payload.value);
+  if (action.payload.value === 1) {
+    msg.heartsGivenBy.push(action.payload.donor);
+  } else {
+    removeHeartDonor(msg, action.payload.donor);
+  }
+  return { messages: newMessages };
+};
+
+
+// heart handler
+const handleAddHeart = (state, action) => {
+  const newMessages = [...state.messages];
+  for (const msg of newMessages) {
+    if (msg.id === action.payload.id) {
+      if (msg.hearts < HEART_LIMIT) {
+        return doHeart(msg, action, newMessages);
+      } else {
+        return state;
+      }
+    }
+  }
+  return state; //no match found ---> error state
+};
+
 // Updates the message state to display on the Chatter Feed
 const messageReducer = (state = initialMessageState, action) => {
-  if (action.type === "ADD_MESSAGE") {
-    // spread operator to copy msgs to new array, then push new msg
-    const newState = [...state.messages, action.message];
-    return { messages: newState };
+
+  switch(action.type) {
+    case "ADD_HEART":
+    {
+      return handleAddHeart(state, action);
+    }
+    case "ADD_MESSAGE":
+    {
+      // spread operator to copy msgs to new array, then push new msg
+      const newState = [...state.messages, action.message];
+      return { messages: newState };
+    }
+    case "DELETE_MESSAGE":
+    {
+      const filteredMessages = state.messages.filter((message) => {
+        // evaluates to false if id matches then doesn't add it to array
+        return message.id !== action.id;
+      });
+      return { messages: filteredMessages };
+    }
+    default:
+      return state;
   }
-  if (action.type === "DELETE_MESSAGE") {
-    const filteredMessages = state.messages.filter((message) => {
-      // evaluates to false if id matches then doesn't add it to array
-      return message.id !== action.id;
-    });
-    return { messages: filteredMessages };
-  }
-  return state;
+
 };
 
 export default messageReducer;
