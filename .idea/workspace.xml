@@ -3,29 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4fafe6ec-697d-4b95-91d8-93df152272aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/AddMessage/AddMessageForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/AddMessage/AddMessageForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Branding/IntroAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Branding/IntroAnimation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Feed/MessageFeed.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Feed/MessageFeed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Feed/components/ChitChatItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Feed/components/ChitChatItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Feed/components/ListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Feed/components/ListItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Feed/components/SocialUnit/Social.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Feed/components/SocialUnit/Social.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Feed/components/SocialUnit/SocialUnit.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Feed/components/SocialUnit/SocialUnit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Feed/components/SocialUnit/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Feed/components/SocialUnit/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Login/LoginBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Login/LoginBtn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Login/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Login/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Navbar/components/NavbarItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Navbar/components/NavbarItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/react-auth0-spa.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/react-auth0-spa.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/reducers/messageReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/reducers/messageReducers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/reducers/userReducers.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/reducers/userReducers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/reducers/userStateReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/reducers/userStateReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/utils/history.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/utils/history.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/views/AboutPage/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/AboutPage/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/views/HomePage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/HomePage/Homepage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/views/LandingPage/LandingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/LandingPage/LandingPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/views/ProfilePage/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/views/ProfilePage/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -130,6 +108,7 @@
       <workItem from="1592766635024" duration="2546000" />
       <workItem from="1592779319757" duration="9002000" />
       <workItem from="1593579734383" duration="9449000" />
+      <workItem from="1593677468235" duration="984000" />
     </task>
     <servers />
   </component>
