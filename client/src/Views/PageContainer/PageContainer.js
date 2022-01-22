@@ -47,24 +47,26 @@ function PageContainer(props) {
     }
 
     return(
-        <Grid container direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} style={{backgroundColor: "#fff9eb", width: "100%", height: "100%"}}>
-            <Grid container item direction={"row"}>
-
+        <Grid container direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} style={{backgroundColor: "rgba(230, 230, 230, 1.0)", width: "100%", height: "100%"}}>
+            <Grid container item direction={"row"} style={{width: "100vw", height: "100vh"}}>
+                <Grid item xs={2} style={{backgroundColor: "rgba(151, 152, 153, 1.0)"}}></Grid>
+                <Grid item xs={7}></Grid>
+                <Grid item xs={3} style={{backgroundColor: "rgba(97, 118, 135, 1.0)"}}></Grid>
             </Grid>   
-            <Grid container direction={"row"} item alignItems={"center"} justifyContent={"flex-start"} style={{bottom: "0", minHeight: "100px", backgroundColor: "rgba(56, 56, 56, 1.00)"}}>
+            <Grid container direction={"row"} item alignItems={"center"} justifyContent={"flex-start"} style={{bottom: "0", minHeight: "40px", position: "absolute", backgroundColor: "rgba(56, 56, 56, 1.00)", zIndex: 50}}>
                     <Grid item xs={3} md={2} style={{paddingLeft: "20px"}}>
                         <Grid container item xs={12}>
-                            <img src={process.env.PUBLIC_URL + "/Assets/Images/personal_logo3_transparent.png"} style={{maxHeight: "40px", maxWidth:"60px"}} alt="..."/>
+                            <img src={process.env.PUBLIC_URL + "/Assets/Images/WeChatter_Logo.png"} style={{maxHeight: "40px", maxWidth:"60px"}} alt="..."/>
                         </Grid>
                     </Grid>
                     <Grid item xs={6} md={8} style={{color :"whitesmoke", paddingLeft: "10px", textAlign: "center"}}>
-                        ©2022 Created with ❤️ by Aamir Sheergar
+                        ©2022 WeChatter. Created with ❤️ in someone's basement.
                     </Grid>
                 <Grid item xs={3} sm={2}>
                     <Grid container direction={"row"} alignItems={"center"} justifyContent={"flex-start"}>
                         <Grid item xs={1}>
                             <br/>
-                            <Divider orientation={"vertical"} flexItem={true} style={{height: "60px", maxHeight: "100%", backgroundColor: "white"}} />
+                            <Divider orientation={"vertical"} flexItem={true} style={{height: "40px", maxHeight: "100%", backgroundColor: "white"}} />
                             <br/>
                         </Grid>
                         <Grid item xs={11}>
@@ -72,9 +74,8 @@ function PageContainer(props) {
                                 direction="column"
                                 spacing={0}
                             >
-                                <Link href="https://github.com/AamirL1011" underline="none" style={{color: "white"}}>GitHub</Link>
+                                <Link href="https://github.com/AamirL1011/WeChatter" underline="none" style={{color: "white"}}>GitHub</Link>
                                 <Link href="https://www.linkedin.com/in/aamir-s/" underline="none" style={{color: "white"}}>LinkedIn</Link>
-                                <Link href="#" onClick={() => handleDialAction("Resume")} underline="none" style={{color: "white"}}>Resume</Link>
                             </Stack>
                         </Grid>
                     </Grid>

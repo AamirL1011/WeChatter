@@ -44,3 +44,23 @@
   }
 }
 
+#motto1 {
+  animation: motoAnim 2.0s ease forwards 0.0s;
+  opacity: 0.0;
+}
+
+#motto2 {
+  animation: motoAnim 2.0s ease forwards 1.0s;
+  opacity: 0.0;
+}
+
+#motto3 {
+  animation: motoAnim 2.0s ease forwards 2.0s;
+  opacity: 0.0;
+}
+
+@keyframes motoAnim {
+  to {
+      opacity: 1.0;
+  }
+}

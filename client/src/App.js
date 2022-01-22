@@ -9,7 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import theme from "./themes";
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import {Button} from "@material-ui/core";
+import {Button, Typography} from "@material-ui/core";
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import CircleIcon from '@mui/icons-material/Circle';
@@ -77,7 +77,7 @@ function App(props) {
                             <Grid container item justifyContent={"center"} alignItems={"center"} >
 
                               <Grid container item className="GreetingBox">
-                                <Box sx={{ flexGrow: 1, background: "rgba(232, 229, 220, 0.5)", backdropFilter: "blur(6px)", padding: "3%", borderRadius: "10px", boxShadow: "0px 0.5px 1px grey" }}>
+                                <Box sx={{ flexGrow: 1, background: "rgba(232, 229, 220, 0.5)", backdropFilter: "blur(8px)", padding: "3%", borderRadius: "10px", boxShadow: "0px 0.5px 1px grey" }}>
                                   <Grid container spacing={2}>
                                       <Grid item xs={12}>
                                           <Grid container direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} >
@@ -104,12 +104,12 @@ function App(props) {
                                       
                                           <Grid container item direction={"row"} justifyContent={"space-evenly"} alignItems={"center"}>
                                             <Grid item xs={12} style={{textAlign: "center"}}>
-                                                <span style={{color: "gray", fontSize: "1.5em", fontWeight: "500",
+                                                <span style={{color: "gray", fontSize: "1.8em", fontWeight: "400",
                                                     fontFamily: "-apple-system, Roboto, serif"}}>
-                                                      <span>Kick back </span>
-                                                      <span>and </span>
+                                                      <span id={"motto1"}>Kick back </span>
+                                                      <span id={"motto2"}>and </span>
                                                       <span>
-                                                        <strong>WeChatter</strong>
+                                                        <strong id={"motto3"}>WeChatter</strong>
                                                       </span>
                                                 </span>
                                             </Grid>
@@ -125,7 +125,7 @@ function App(props) {
                                                   borderRadius: "4px", fontFamily: "-apple-system, Roboto, serif"}}
                                               className={`enter-button ${classes.enterButton}`}
                                               onClick={() => handleEnter()}>
-                                        Enter
+                                       <Typography><span style={{fontFamily: "-apple-system, Roboto, serif"}}>Enter</span></Typography>
                                       </Button>
                                     </Grid>
                                     <Grid item xs={4} />
