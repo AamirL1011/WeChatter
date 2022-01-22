@@ -47,8 +47,8 @@ function PageContainer(props) {
     }
 
     return(
-        <Grid container direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} style={{backgroundColor: "rgba(230, 230, 230, 1.0)", width: "100%", height: "100%"}}>
-            <Grid container item direction={"row"} style={{width: "100vw", height: "100vh"}}>
+        <Grid container direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} style={{backgroundColor: "rgba(230, 230, 230, 1.0)", width: "100vw", height: "100vh"}}>
+            <Grid container item direction={"row"} style={{width: "100%", height: "100%"}}>
                 <Grid item xs={2} style={{backgroundColor: "rgba(151, 152, 153, 1.0)"}}></Grid>
                 <Grid item xs={7}></Grid>
                 <Grid item xs={3} style={{backgroundColor: "rgba(97, 118, 135, 1.0)"}}></Grid>
