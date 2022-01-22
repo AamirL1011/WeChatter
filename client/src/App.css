@@ -1,0 +1,46 @@
+.splashVid {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  background-size: cover;
+  opacity: 0.60;
+  overflow: hidden;
+}
+
+.splashPage:before{
+  content: '';
+  position: absolute;
+  background: rgba(203, 137, 62, 0.5);
+  border-radius: 5px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.menuButton:hover {
+  filter: grayscale(50%);
+}
+
+.enter-button {
+  animation: pulse 2.0s infinite;
+}
+
+.enter-button:hover {
+  animation: none;
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0.01rem rgba(0, 0, 0, 0.15);
+  }
+
+  to {
+    box-shadow: 0 0 0 0.30rem rgba(0, 0, 0, 0.00);
+  }
+}
+
