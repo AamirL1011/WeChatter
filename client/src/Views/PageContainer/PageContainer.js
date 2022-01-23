@@ -1,5 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
+import HomePage from "../Pages/HomePage.js";
 
 
 
@@ -47,29 +48,25 @@ function PageContainer(props) {
     }
 
     return(
-        <Grid container direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} style={{backgroundColor: "rgba(230, 230, 230, 1.0)", width: "100vw", height: "100vh"}}>
-            <Grid container item direction={"row"} style={{width: "100%", height: "100%"}}>
-                <Grid item xs={2} style={{backgroundColor: "rgba(151, 152, 153, 1.0)"}}></Grid>
-                <Grid item xs={7}></Grid>
-                <Grid item xs={3} style={{backgroundColor: "rgba(97, 118, 135, 1.0)"}}></Grid>
-            </Grid>   
-            <Grid container direction={"row"} item alignItems={"center"} justifyContent={"flex-start"} style={{bottom: "0", minHeight: "40px", position: "absolute", backgroundColor: "rgba(56, 56, 56, 1.00)", zIndex: 50}}>
+        <Grid container direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} style={{backgroundColor: "rgba(230, 230, 230, 1.0)", height: "100vh", maxWidth: "100vw", maxHeight: "100vh"}}>
+           <HomePage />
+            <Grid container direction={"row"} item alignItems={"center"} justifyContent={"flex-start"} style={{backgroundColor: "rgba(56, 56, 56, 1.00)", maxWidth: "100vw"}}>
                     <Grid item xs={3} md={2} style={{paddingLeft: "20px"}}>
                         <Grid container item xs={12}>
-                            <img src={process.env.PUBLIC_URL + "/Assets/Images/WeChatter_Logo.png"} style={{maxHeight: "40px", maxWidth:"60px"}} alt="..."/>
+                            <img src={process.env.PUBLIC_URL + "/Assets/Images/WeChatter_Logo.png"} style={{maxHeight: "30px", maxWidth:"40px"}} alt="..."/>
                         </Grid>
                     </Grid>
                     <Grid item xs={6} md={8} style={{color :"whitesmoke", paddingLeft: "10px", textAlign: "center"}}>
                         ©2022 WeChatter. Created with ❤️ in someone's basement.
                     </Grid>
                 <Grid item xs={3} sm={2}>
-                    <Grid container direction={"row"} alignItems={"center"} justifyContent={"flex-start"}>
+                    <Grid container direction={"row"} alignItems={"center"} justifyContent={"flex-start"} >
                         <Grid item xs={1}>
                             <br/>
                             <Divider orientation={"vertical"} flexItem={true} style={{height: "40px", maxHeight: "100%", backgroundColor: "white"}} />
                             <br/>
                         </Grid>
-                        <Grid item xs={11}>
+                        <Grid item xs={11} >
                             <Stack
                                 direction="column"
                                 spacing={0}
