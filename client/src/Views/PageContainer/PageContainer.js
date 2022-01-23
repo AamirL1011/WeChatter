@@ -1,13 +1,8 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import HomePage from "../Pages/HomePage.js";
+import {ContextProvider} from '../../Services/SocketContext';
 
-
-
-
-import SummarizeIcon from '@mui/icons-material/Summarize';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
 
 import {Divider} from "@material-ui/core";
 import Stack from "@mui/material/Stack";
@@ -49,7 +44,9 @@ function PageContainer(props) {
 
     return(
         <Grid container direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} style={{backgroundColor: "rgba(230, 230, 230, 1.0)", height: "100vh", maxWidth: "100vw", maxHeight: "100vh"}}>
+           <ContextProvider>
            <HomePage />
+           </ContextProvider>
             <Grid container direction={"row"} item alignItems={"center"} justifyContent={"flex-start"} style={{backgroundColor: "rgba(56, 56, 56, 1.00)", maxWidth: "100vw"}}>
                     <Grid item xs={3} md={2} style={{paddingLeft: "20px"}}>
                         <Grid container item xs={12}>
