@@ -53,7 +53,7 @@ function PageContainer(props) {
             <Grid container direction={"row"} item alignItems={"center"} justifyContent={"flex-start"} style={{backgroundColor: "rgba(56, 56, 56, 1.00)", maxWidth: "100vw"}}>
                     <Grid item xs={3} md={2} style={{paddingLeft: "20px"}}>
                         <Grid container item xs={12}>
-                            <img src={process.env.PUBLIC_URL + "/Assets/Images/WeChatter_Logo.png"} style={{maxHeight: "30px", maxWidth:"40px"}} alt="..."/>
+                            <img src={process.env.PUBLIC_URL + "/Assets/Images/WeChatter_Logo.png"} style={{maxHeight: "40px", maxWidth:"50px"}} alt="..."/>
                         </Grid>
                     </Grid>
                     <Grid item xs={6} md={8} style={{color :"whitesmoke", paddingLeft: "10px", textAlign: "center"}}>
