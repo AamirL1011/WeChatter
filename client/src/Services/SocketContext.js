@@ -71,7 +71,6 @@ const ContextProvider = ({children}) => {
         setCallEnded(true);
         setCallAccepted(false);
         setStream(null);
-        setMe('');
         setCall('');
         connectionRef.current.destroy();
     }

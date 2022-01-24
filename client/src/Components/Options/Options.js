@@ -26,7 +26,7 @@ function Options({children}) {
                              onChange={(e) => setName(e.target.value) } />
                              {console.log("me", me)}
                              <CopyToClipboard text={me}>
-                                <Button variant="contained" fulWidth startIcon={<Assignment fontSize="large" />}>
+                                <Button variant="contained" fullWidth startIcon={<Assignment fontSize="large" />}>
                                     Copy Meeting ID
                                 </Button>
                              </CopyToClipboard>
