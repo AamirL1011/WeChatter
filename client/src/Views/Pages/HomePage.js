@@ -29,13 +29,13 @@ function HomePage() {
         
     </Grid>
   </Grid>
-  <Grid item xs={7}>
+  <Grid item xs={7} md={8}>
     <VideoPlayer/>
     <Options>
         <Notifications />
     </Options>
   </Grid>
-  <Grid item xs={3} style={{backgroundColor: "rgba(97, 118, 135, 1.0)"}}>
+  <Grid item xs={3} md={2} style={{backgroundColor: "rgba(97, 118, 135, 1.0)"}}>
     <Grid container item xs={12} direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} style={{ height: "100%", width: "100%"}}>
         <Grid item xs={11} style={{border: "2px solid white", borderRadius: "6px", height: "300px", maxHeight: "100%", textAlign: "center"}}>
         Messaging feature coming soon!

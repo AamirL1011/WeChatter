@@ -4,7 +4,7 @@ import Peer from 'simple-peer';
 
 const SocketContext = createContext();
 
-const socket = io('http://localhost:5000');
+let socket = io('http://localhost:5000');
 
 const ContextProvider = ({children}) => {
 
@@ -22,6 +22,7 @@ const ContextProvider = ({children}) => {
 
 
     useEffect(() => {
+        socket = io('http://localhost:5000');
         navigator.mediaDevices.getUserMedia({video: true, audio: true})
         .then((currentStream) => {
             setStream(currentStream);
@@ -33,12 +34,12 @@ const ContextProvider = ({children}) => {
         socket.on('calluser', ({from, name: callerName, signal}) => {
             setCall({hasReceivedCall: true, from, name: callerName, signal})
         })
-    }, []);
+    }, [callEnded]);
 
     //=========================================---FUNCTIONS---============================================
     const answerCall = () => {
         setCallAccepted(true);
-
+        setCallEnded(false);
         const peer = new Peer({initiator: false, trickle: false, stream });
         peer.on('signal', (data) => {
             socket.emit('answercall', {signal: data, to: call.from });
@@ -68,9 +69,11 @@ const ContextProvider = ({children}) => {
     }
     const leaveCall = () => {
         setCallEnded(true);
+        setCallAccepted(false);
+        setStream(null);
+        setMe('');
+        setCall('');
         connectionRef.current.destroy();
-        // TODO: Find workaround, for getting new user id
-        window.location.reload();
     }
 
     return (
