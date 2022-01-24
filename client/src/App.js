@@ -77,7 +77,7 @@ function App(props) {
                             <Grid container item justifyContent={"center"} alignItems={"center"} >
 
                               <Grid container item className="GreetingBox">
-                                <Box sx={{ flexGrow: 1, background: "rgba(232, 229, 220, 0.5)", backdropFilter: "blur(8px)", padding: "3%", borderRadius: "10px", boxShadow: "0px 0.5px 1px grey" }}>
+                                <Box sx={{ flexGrow: 1, background: "rgba(232, 229, 220, 0.6)", backdropFilter: "blur(6px)", padding: "3%", borderRadius: "10px", boxShadow: "0px 0.5px 1px grey" }}>
                                   <Grid container spacing={2}>
                                       <Grid item xs={12}>
                                           <Grid container direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} >
