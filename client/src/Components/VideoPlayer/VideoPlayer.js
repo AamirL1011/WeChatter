@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     videoMe: {
       height: '100%',
       maxWidth: "100%",
+      objectFit: "cover",
       [theme.breakpoints.down('sm')]: {
         maxWidth: "100%",
       },
@@ -15,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
     videoOther: {
         width: "100%",
         maxWidth: "100%",
+        objectFit: "cover",
         [theme.breakpoints.down('sm')]: {
           maxWidth: "100%",
         },

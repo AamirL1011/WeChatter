@@ -1,15 +1,20 @@
 import React, { useState, useRef } from 'react';
 import Grid from '@material-ui/core/Grid';
-import { TextField } from '@mui/material';
+import { TextField, Typography, Button } from '@mui/material';
 import Paper from '@material-ui/core/Paper';
 import VideoPlayer from "../../Components/VideoPlayer/VideoPlayer.js";
 import Notifications from "../../Components/Notifications/Notifications.js";
 import Options from "../../Components/Options/Options.js";
+import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
+import ExitToAppTwoToneIcon from '@mui/icons-material/ExitToAppTwoTone';
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 
 function HomePage() {
 
     let msgInput = useRef(null);
+    const { user, logout } = useAuth0();
 
 
   const handleEnter = (event) => {
@@ -25,8 +30,28 @@ function HomePage() {
 
   return ( <Grid container item direction={"row"} style={{maxWidth: "100vw", height: "85.1%"}}>
   <Grid item xs={2} style={{backgroundColor: "rgba(151, 152, 153, 1.0)"}}>
-    <Grid container item xs={12} direction={"row"} style={{ height: "100%", width: "100%"}}>
-        
+    <Grid container item xs={12} direction={"row"} justifyContent={"center"} alignItems={"flex-start"} style={{ height: "100%", width: "100%"}}>
+        <Grid item xs={10} md={10} style={{textAlign: "center", paddingTop: "3px"}}>
+            <span style={{fontSize: "1.3vw"}}>{user.name}</span>
+        </Grid>
+        <Grid item xs={2} xs={2} style={{textAlign: "start", paddingTop: "3px"}}>
+            <AccountCircleTwoToneIcon style={{fontSize: "1.8vw", marginTop: "1px"}} />
+        </Grid>
+        <Grid item xs={12} style={{textAlign: "center"}}>
+            <Button  fullWidth
+                    onClick={() => logout({ returnTo: window.location.origin }) }
+                    endIcon={<ExitToAppTwoToneIcon style={{fontSize: "1.5vw", color: "white"}} />}
+                    variant={"contained"}
+                    size="small"
+                    style={{backgroundColor: "rgba(151, 152, 153, 1.0)", borderRadius: "0px"}}
+                    disableElevation={true}
+                    >
+                      <span style={{fontSize: "1.2vw", color: "white"}}>Logout</span>
+            </Button>
+        </Grid>
+        <Grid item xs={11} style={{height: "85%", border: "2px solid lightgrey"}}>
+
+        </Grid>
     </Grid>
   </Grid>
   <Grid item xs={7} md={8}>
@@ -38,7 +63,7 @@ function HomePage() {
   <Grid item xs={3} md={2} style={{backgroundColor: "rgba(97, 118, 135, 1.0)"}}>
     <Grid container item xs={12} direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} style={{ height: "100%", width: "100%"}}>
         <Grid item xs={11} style={{border: "2px solid white", borderRadius: "6px", height: "300px", maxHeight: "100%", textAlign: "center"}}>
-        Messaging feature coming soon!
+        Secure messaging feature coming soon!
         </Grid>
         <Grid item xs={11} style={{ height: "90px", width: "100%", textAlign: "center"}}>
             <Paper style={{flexGrow: 1, height: "100%", paddingBottom: "3px"}}>
@@ -52,6 +77,7 @@ function HomePage() {
           onKeyPress={(EVENT) => handleEnter(EVENT)}
           margin="dense"
           style={{width: "95%", marginTop: "7px"}}
+          disabled={true}
         />
             </Paper>
         </Grid>

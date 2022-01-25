@@ -2,6 +2,8 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import HomePage from "../Pages/HomePage.js";
 import {ContextProvider} from '../../Services/SocketContext';
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 
 import {Divider} from "@material-ui/core";
@@ -12,35 +14,8 @@ import Link from '@mui/material/Link';
 
 function PageContainer(props) {
 
-    const handleDialAction = (actionName) => {
-        switch(actionName) {
-            case "Resume" :{
-                const link = document.createElement('a');
-                link.href = process.env.PUBLIC_URL + './Assets/Documents/resume.pdf';
-                link.setAttribute('download', `resume.pdf`);
-                document.body.appendChild(link);
-                link.click();
-                link.parentNode.removeChild(link);
-                break;
-            }
-            case "LinkedIn": {
-                const link = document.createElement('a');
-                link.href = "https://www.linkedin.com/in/aamir-s/";
-                link.click();
-                link.parentNode.removeChild(link);
-                break;
-            }
-            case "GitHub": {
-                const link = document.createElement('a');
-                link.href = "https://github.com/AamirL1011";
-                link.click();
-                link.parentNode.removeChild(link);
-                break;
-            }
-            default:
-                break;
-        }
-    }
+    const { logout } = useAuth0();
+
 
     return(
         <Grid container direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} style={{backgroundColor: "rgba(230, 230, 230, 1.0)", height: "100vh", maxWidth: "100vw", maxHeight: "100vh"}}>
@@ -59,9 +34,9 @@ function PageContainer(props) {
                 <Grid item xs={3} sm={2}>
                     <Grid container direction={"row"} alignItems={"center"} justifyContent={"flex-start"} >
                         <Grid item xs={1}>
-                            <br/>
-                            <Divider orientation={"vertical"} flexItem={true} style={{height: "40px", maxHeight: "100%", backgroundColor: "white"}} />
-                            <br/>
+                            <br />
+                            <Divider orientation={"vertical"} flexItem={true} style={{height: "40px", maxHeight: "100%", padding: "0px", backgroundColor: "white"}} />
+                            <br />
                         </Grid>
                         <Grid item xs={11} >
                             <Stack
@@ -70,6 +45,8 @@ function PageContainer(props) {
                             >
                                 <Link href="https://github.com/AamirL1011/WeChatter" underline="none" style={{color: "white"}}>GitHub</Link>
                                 <Link href="https://www.linkedin.com/in/aamir-s/" underline="none" style={{color: "white"}}>LinkedIn</Link>
+                                <Link href="#" underline="none" style={{color: "white"}} onClick={() => logout({ returnTo: window.location.origin })}>Logout</Link>
+
                             </Stack>
                         </Grid>
                     </Grid>

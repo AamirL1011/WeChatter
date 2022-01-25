@@ -13,7 +13,8 @@ import {Button, Typography} from "@material-ui/core";
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import CircleIcon from '@mui/icons-material/Circle';
-import {Fade} from 'react-awesome-reveal';
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 
 
@@ -41,24 +42,22 @@ const useStyles = makeStyles((theme) => ({
 
 
 function App(props) {
-  const {appState, updateMainState} = props;
   const classes = useStyles();
-  const [mainState, updateMainAppState] = useState(appState);
-  const [openLoad, setOpenLoad] = React.useState(false);
+  const { isAuthenticated, isLoading, loginWithRedirect } = useAuth0();
 
 
-  useEffect(() => {
-    updateMainState(mainState);
-  }, [mainState]);
 
   const handleEnter = () => {
-    setOpenLoad(true);
-   const loadTimer = setTimeout(() => {
-      setOpenLoad(false);
-      clearTimeout(loadTimer);
-      updateMainAppState(true);
-    }, 500);
+    loginWithRedirect();
+  }
 
+  if (isLoading) {
+    return (<div> 
+      <Backdrop sx={{ color: '#252525', zIndex: "60" }}
+      open={true}>
+      <CircularProgress color="inherit" />
+      </Backdrop></div>
+                          );
   }
 
 
@@ -67,7 +66,7 @@ function App(props) {
         <ThemeProvider theme={theme}>
               <Grid>
                 {
-                    !mainState && (
+                    !isAuthenticated && (
                         <Grid container className={"splashPage"} justifyContent={"center"} alignItems={"center"} style={{backgroundColor: "lightgray", width: "100vw", height: "100vh"}}>
                           <video className={"splashVid"} playsInline autoPlay muted loop>
                             <source src={process.env.PUBLIC_URL + "/Assets/Videos/video.mp4"} type="video/mp4" />
@@ -134,18 +133,12 @@ function App(props) {
                               </Grid>
                             </Grid>
                           </Grid>
-                          <Backdrop
-                              sx={{ color: '#252525', zIndex: "60" }}
-                              open={openLoad}
-                          >
-                            <CircularProgress color="inherit" />
-                          </Backdrop>
                         </Grid>
                     )
                 }
                 {
-                    mainState && (
-                          <PageContainer />
+                    isAuthenticated && (
+                      <PageContainer />
                     )
                 }
               </Grid>
