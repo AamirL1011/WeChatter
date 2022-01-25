@@ -53,7 +53,7 @@ function VideoPlayer() {
     
        
   return (
-  <Grid container direction={"row"} justifyContent={"space-evenly"} alignItems={"center"}>
+  <Grid container item direction={"row"} justifyContent={"space-evenly"} alignItems={"center"}>
       {
           stream && (
             <Grid item xs={9} sm={7} md={3} style={{textAlign: "center", display: "flex",

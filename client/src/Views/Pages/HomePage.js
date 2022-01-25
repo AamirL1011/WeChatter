@@ -28,8 +28,8 @@ function HomePage() {
       }
   }  
 
-  return ( <Grid container item direction={"row"} style={{maxWidth: "100vw", height: "85.1%"}}>
-  <Grid item xs={2} style={{backgroundColor: "rgba(151, 152, 153, 1.0)"}}>
+  return ( <Grid container item direction={"row"} style={{maxWidth: "100vw", height: "89.5%"}}>
+  <Grid item xs={12} md={2} style={{backgroundColor: "rgba(151, 152, 153, 1.0)"}}>
     <Grid container item xs={12} direction={"row"} justifyContent={"center"} alignItems={"flex-start"} style={{ height: "100%", width: "100%"}}>
         <Grid item xs={10} md={10} style={{textAlign: "center", paddingTop: "3px"}}>
             <span style={{fontSize: "1.3vw"}}>{user.name}</span>
@@ -54,14 +54,14 @@ function HomePage() {
         </Grid>
     </Grid>
   </Grid>
-  <Grid item xs={7} md={8}>
+  <Grid item xs={12} md={8}>
     <VideoPlayer/>
     <Options>
         <Notifications />
     </Options>
   </Grid>
-  <Grid item xs={3} md={2} style={{backgroundColor: "rgba(97, 118, 135, 1.0)"}}>
-    <Grid container item xs={12} direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} style={{ height: "100%", width: "100%"}}>
+  <Grid item xs={12} md={2} style={{backgroundColor: "rgba(97, 118, 135, 1.0)"}}>
+    <Grid container xs={12} direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} style={{ height: "100%", width: "100%"}}>
         <Grid item xs={11} style={{border: "2px solid white", borderRadius: "6px", height: "300px", maxHeight: "100%", textAlign: "center"}}>
         Secure messaging feature coming soon!
         </Grid>

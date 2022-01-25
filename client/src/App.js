@@ -72,7 +72,7 @@ function App(props) {
                             <source src={process.env.PUBLIC_URL + "/Assets/Videos/video.mp4"} type="video/mp4" />
                           </video>
 
-                          <Grid container item xs={11} sm={7} md={5} lg={2} xl={1} style={{zIndex: "50"}} justifyContent={"center"} alignItems={"center"}>
+                          <Grid container item xs={11} sm={7} md={5} lg={4} xl={3} style={{zIndex: "50"}} justifyContent={"center"} alignItems={"center"}>
                             <Grid container item justifyContent={"center"} alignItems={"center"} >
 
                               <Grid container item className="GreetingBox">
