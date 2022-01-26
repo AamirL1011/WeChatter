@@ -1,4 +1,4 @@
 # WeChatter (Beta)
 
-A WebRTC based video conferencing app.
+A WebRTC based real-time video conferencing app.
 
