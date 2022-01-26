@@ -11,9 +11,7 @@ const ContextProvider = ({children}) => {
 
     const localFeed = useRef();
     const connectionRef = useRef();
-    const rFeed1 = useRef();
-    const rFeed2 = useRef();
-    const rFeed3 = useRef();
+    
 
     const [stream, setStream] = useState(null);
     const [local, setLocal] = useState('');
@@ -22,6 +20,7 @@ const ContextProvider = ({children}) => {
     const [meetingEnded, setMeetingEnded] = useState(false);
     const [remoteFeeds, setRemoteFeeds] = useState([]);
     const [remoteFeedBank, setRemoteFeedBank] = useState([]);
+    const [remoteStreams, setRemoteStreams] = useState([]);
     const [meeting, setMeeting] = useState({});
     const [numStreams, setNumStreams] = useState(1);
 
@@ -42,7 +41,6 @@ const ContextProvider = ({children}) => {
             setMeeting({hasReceivedRequest: true, from, name: callerName, signal})
         })
 
-        setRemoteFeedBank([rFeed1, rFeed2, rFeed3]);
     
 
     }, [meetingEnded]);
@@ -119,11 +117,6 @@ const ContextProvider = ({children}) => {
 
     //======================================---MEETING FUNCTIONS---==========================================
 
-    const createRef = (remoteStream) => {
-        remoteFeedBank[0].current.srcObject = remoteStream;
-        setRemoteFeeds(arr => [...arr, remoteFeedBank[0]]);
-        setRemoteFeedBank(arr => arr.splice(0,1));
-    }
 
     const answerJoin = () => {
         if (numStreams >= 2) {
@@ -138,10 +131,12 @@ const ContextProvider = ({children}) => {
         const peer = new Peer({initiator: false, trickle: false, stream });
         peer.on('signal', (data) => {
             socket.emit('allowentry', {signal: data, to: meeting.from });
+            console.log("allow entry emmited");
         });
 
         peer.on('stream', (remoteStream) => {
-            createRef(remoteStream);
+            setRemoteStreams(arr => [...arr, remoteStream]);
+            console.log("anser join remote stream created");
         } );
         setNumStreams(num => num+1);
         peer.signal(meeting.signal);
@@ -158,8 +153,8 @@ const ContextProvider = ({children}) => {
         })
         
         peer.on('stream', (remoteStream) => {
-            createRef(remoteStream);
-            console.log("remote stream done");
+            setRemoteStreams(arr => [...arr, remoteStream]);
+            console.log("join meeting remote stream done");
         } );
        
         socket.on('entryaccepted', (signal) => {
@@ -168,8 +163,6 @@ const ContextProvider = ({children}) => {
             console.log("entry accpeted");
         } )
         
-        console.log("meetingAccpeted?: ", meetingAccepted)
-
         connectionRef.current = peer;
     }
 
@@ -204,6 +197,7 @@ const ContextProvider = ({children}) => {
             meetingAccepted,
             localFeed,
             remoteFeeds,
+            remoteStreams,
             stream,
             name,
             setName,

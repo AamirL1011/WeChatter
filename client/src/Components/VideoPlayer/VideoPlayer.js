@@ -47,18 +47,19 @@ const useStyles = makeStyles((theme) => ({
 function VideoPlayer() {
 
     const {name, meetingAccepted, localFeed, 
-        remoteFeeds, meetingEnded, stream, meeting} = useContext(SocketContext);
+        remoteStreams, meetingEnded, stream, meeting} = useContext(SocketContext);
 
     const classes = useStyles();
-    const remoteFeed = remoteFeeds[0];
+    let remoteFeed = useRef();
 
     useEffect(() => {
       localFeed.current.srcObject = stream;
-      /* navigator.mediaDevices.getUserMedia({video: true, audio: true})
+      remoteFeed.current.srcObject = remoteStreams[0];
+     /*  navigator.mediaDevices.getUserMedia({video: true, audio: true})
         .then((currentStream) => {
             localFeed.current.srcObject = currentStream;
-        }); */
-    }, [])
+        });  */
+    }, [meetingAccepted, remoteStreams])
        
   return (
   <Grid container item direction={"row"} justifyContent={"space-evenly"} alignItems={"center"}>
