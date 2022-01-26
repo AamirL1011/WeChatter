@@ -17,7 +17,7 @@ function MeetingRoom() {
 
     let msgInput = useRef(null);
     const { user, logout } = useAuth0();
-    const {local} = useContext(SocketContext);
+    const {roomID, leaveMeeting} = useContext(SocketContext);
 
 
   const handleEnter = (event) => {
@@ -42,17 +42,18 @@ function MeetingRoom() {
         </Grid>
         <Grid item xs={12} style={{textAlign: "center"}}>
             <Button  fullWidth
+                    onClick={() => leaveMeeting()}
                     endIcon={<ExitToAppTwoToneIcon style={{fontSize: "1.5vw", color: "white"}} />}
                     variant={"contained"}
                     size="small"
                     style={{backgroundColor: "darkred", borderRadius: "0px"}}
                     disableElevation={true}
                     >
-                      <span style={{fontSize: "1.2vw", color: "white"}}>End Meeting</span>
+                      <span style={{fontSize: "1.2vw", color: "white"}}>Leave Meeting</span>
             </Button>
         </Grid>
         <Grid item xs={12}>
-          <span>Meeting Room ID: {local}</span>
+          <span>Meeting Room ID: {roomID}</span>
         </Grid>
         <Grid item xs={11} style={{height: "75%", border: "2px solid lightgrey"}}>
         <Notifications />

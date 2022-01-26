@@ -9,111 +9,42 @@ let socket = io('http://localhost:5000');
 
 const ContextProvider = ({children}) => {
 
-    const localFeed = useRef();
     const connectionRef = useRef();
     
 
     const [stream, setStream] = useState(null);
     const [local, setLocal] = useState('');
+    const [roomID, setRoomID] = useState('');
     const [name, setName] = useState('');
     const [meetingAccepted, setMeetingAccepted] = useState(false);
     const [meetingEnded, setMeetingEnded] = useState(false);
-    const [remoteFeeds, setRemoteFeeds] = useState([]);
-    const [remoteFeedBank, setRemoteFeedBank] = useState([]);
     const [remoteStreams, setRemoteStreams] = useState([]);
     const [meeting, setMeeting] = useState({});
     const [numStreams, setNumStreams] = useState(1);
 
 
-
     useEffect(() => {
-        socket = io('http://localhost:5000');
         navigator.mediaDevices.getUserMedia({video: true, audio: true})
         .then((currentStream) => {
             setStream(currentStream);
-            localFeed.current.srcObject = currentStream;
         });
+    }, [meetingAccepted])
+
+    useEffect(() => {
+        socket = io('http://localhost:5000');
+
         socket.on('local', (id) => {
             setLocal(id);
+            setRoomID(id);
         });
 
         socket.on('joinmeeting', ({from, name: callerName, signal}) => {
             setMeeting({hasReceivedRequest: true, from, name: callerName, signal})
         })
 
-    
 
     }, [meetingEnded]);
 
-
-
-    // ========================================================================================
-   /*  const [stream, setStream] = useState(null);
-    const [me, setMe] = useState('');
-    const [name, setName] = useState('');
-    const [call, setCall] = useState({});
-    const [callAccepted, setCallAccepted] = useState(false);
-    const [callEnded, setCallEnded] = useState(false);
-
-
-    const myVideoFeed = useRef();
-    const otherVideoFeed = useRef();
-    const connectionRef = useRef();
- */
-
-   /*  useEffect(() => {
-        socket = io('http://localhost:5000');
-        navigator.mediaDevices.getUserMedia({video: true, audio: true})
-        .then((currentStream) => {
-            setStream(currentStream);
-            myVideoFeed.current.srcObject = currentStream;
-        });
-        socket.on('me', (id) => {
-            setMe(id);
-        });
-        socket.on('calluser', ({from, name: callerName, signal}) => {
-            setCall({hasReceivedCall: true, from, name: callerName, signal})
-        })
-    }, [callEnded]);
- */
-    //=========================================---FUNCTIONS---============================================
-   /*  const answerCall = () => {
-        setCallAccepted(true);
-        setCallEnded(false);
-        const peer = new Peer({initiator: false, trickle: false, stream });
-        peer.on('signal', (data) => {
-            socket.emit('answercall', {signal: data, to: call.from });
-        })
-        peer.on('stream', (currentStream) => {
-            otherVideoFeed.current.srcObject = currentStream;
-        } );
-
-        peer.signal(call.signal);
-
-        connectionRef.current = peer;
-    }
-    const callUser = (id) => {
-        const peer = new Peer({initiator: true, trickle: false, stream });
-        peer.on('signal', (data) => {
-            socket.emit('calluser', {userToCall: id, signalData: data, from: me, name});
-        })
-        peer.on('stream', (currentStream) => {
-            otherVideoFeed.current.srcObject = currentStream;
-        } );
-
-        socket.on('callaccepted', (signal) => {
-            setCallAccepted(true);
-            peer.signal(signal);
-        } )
-        connectionRef.current = peer;
-    }
-    const leaveCall = () => {
-        setCallEnded(true);
-        setCallAccepted(false);
-        setStream(null);
-        setCall('');
-        connectionRef.current.destroy();
-    } */
 
     //======================================---MEETING FUNCTIONS---==========================================
 
@@ -143,8 +74,11 @@ const ContextProvider = ({children}) => {
         connectionRef.current = peer;
     }
 
+
     const joinMeeting = (id) => {
+        setRoomID(id);
         console.log("join meeting called");
+        setNumStreams(num => num+1);
         const peer = new Peer({initiator: true, trickle: false, stream });
         console.log("peer created");
         peer.on('signal', (data) => {
@@ -194,11 +128,12 @@ const ContextProvider = ({children}) => {
         <SocketContext.Provider value={{
             meeting,
             setMeetingAccepted,
+            setMeetingEnded,
             meetingAccepted,
-            localFeed,
-            remoteFeeds,
             remoteStreams,
             stream,
+            setStream,
+            roomID,
             name,
             setName,
             meetingEnded,

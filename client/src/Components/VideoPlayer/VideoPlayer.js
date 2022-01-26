@@ -1,4 +1,4 @@
-import React, {useContext, useRef, createRef, useEffect} from 'react';
+import React, {useContext, useRef, useState, createRef, useEffect} from 'react';
 import {Grid, Typography, Paper, makeStyles} from '@material-ui/core';
 
 import {SocketContext} from '../../Services/SocketContext';
@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
       },
     },
     videoOther: {
-        width: "100%",
+        width: "240px",
         maxWidth: "100%",
         objectFit: "cover",
         [theme.breakpoints.down('sm')]: {
@@ -46,20 +46,30 @@ const useStyles = makeStyles((theme) => ({
 
 function VideoPlayer() {
 
-    const {name, meetingAccepted, localFeed, 
-        remoteStreams, meetingEnded, stream, meeting} = useContext(SocketContext);
+    const {name, meetingAccepted, 
+        remoteStreams, meetingEnded, setStream, stream, meeting} = useContext(SocketContext);
 
     const classes = useStyles();
-    let remoteFeed = useRef();
+    let remoteVidFeed = useRef();
+    let localVidFeed = useRef();
+    const [hasRemote, setHasRemote] = useState(false);
+
 
     useEffect(() => {
-      localFeed.current.srcObject = stream;
-      remoteFeed.current.srcObject = remoteStreams[0];
-     /*  navigator.mediaDevices.getUserMedia({video: true, audio: true})
+      if (stream) {
+        localVidFeed.current.srcObject = stream;
+      } else {
+        navigator.mediaDevices.getUserMedia({video: true, audio: true})
         .then((currentStream) => {
-            localFeed.current.srcObject = currentStream;
-        });  */
-    }, [meetingAccepted, remoteStreams])
+            localVidFeed.current.srcObject = currentStream;
+        }); 
+      }
+
+      if (remoteStreams.length > 0) {
+        remoteVidFeed.current.srcObject = remoteStreams[0];
+      } 
+    
+    }, [meetingAccepted, remoteStreams.length])
        
   return (
   <Grid container item direction={"row"} justifyContent={"space-evenly"} alignItems={"center"}>
@@ -68,16 +78,16 @@ function VideoPlayer() {
             <Grid item xs={9} sm={7} md={3} style={{textAlign: "center", display: "flex",
             justifyContent: "center"}}>
                 <Paper className={classes.paperMe}>
-                <video playsInline muted autoPlay ref={localFeed} className={classes.videoMe}  />
+                <video playsInline muted autoPlay ref={localVidFeed} className={classes.videoMe}  />
                 </Paper>
             </Grid>
           )
       }
       {
-          meetingAccepted && !meetingEnded ? (
+             meetingAccepted && !meetingEnded ? (
             <Grid item xs={12} md={10} style={{textAlign: "center", display: "flex",
             justifyContent: "center"}}>
-                <Paper className={classes.paperOther}>
+               <div className={classes.paperOther}>
                 <Grid container>
                    {/*  <Grid item xs={12}>
                     <Typography>
@@ -85,10 +95,10 @@ function VideoPlayer() {
                 </Typography>
                     </Grid> */}
                     <Grid item xs={12} style={{maxHeight: "90%", textAlign: "center"}}>
-                    <video playsInline autoPlay ref={remoteFeed} className={classes.videoOther} />
+                    <video playsInline autoPlay ref={remoteVidFeed} className={classes.videoOther} />
                     </Grid>
                 </Grid>
-                </Paper>
+                </div>
             </Grid>
           ) : (<></>)
       }
