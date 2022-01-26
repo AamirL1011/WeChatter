@@ -12,6 +12,7 @@ function RoomOptions() {
     
     const { user } = useAuth0();
     const [idToJoin, setIdToJoin] = useState(''); 
+    const [startMeet, setStartMeet] = useState(true);
 
     useEffect(() => {
         setName(user.name);
@@ -43,14 +44,21 @@ function RoomOptions() {
                                 Join a Meeting:
                             </Typography>
                             <TextField label="Enter Meeting ID" value={idToJoin} fullWidth
-                             onChange={(e) => setIdToJoin(e.target.value) } />      
+                             onChange={(e) => {
+                                 if (e.target.value != local ) {
+                                    setStartMeet(false);
+                                 } else {
+                                    setStartMeet(true);
+                                 }
+                                 setIdToJoin(e.target.value)} 
+                                 } />      
                                     <Button 
                                     variant="contained"
                                     startIcon={<Phone fontSize="large" />}
                                     fullWidth
                                     onClick={() => handleJoinMeeting(idToJoin)}
                                     >
-                                        Join
+                                        {(startMeet)? "Start Meeting" : "Join"}
                                     </Button>                          
                         </Grid>
                     </Grid>
