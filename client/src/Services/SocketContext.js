@@ -102,11 +102,12 @@ const ContextProvider = ({children}) => {
             peer.signal(signal);
             console.log("entry accpeted");
         } )
-        
         connectionRef.current = peer;
     }
 
     const leaveMeeting = () => {
+        //connectionRef.current.removeStream(stream);
+        //connectionRef.current.off("signal");
         socket.emit('meetingended');
         setMeetingEnded(true);
         setMeetingAccepted(false);

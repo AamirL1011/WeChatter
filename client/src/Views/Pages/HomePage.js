@@ -19,8 +19,8 @@ function HomePage() {
 
   return ( <Grid container item direction={"row"} style={{maxWidth: "100vw", height: "100vh", maxHeight: "100vh"}}>
   
-  <Grid item xs={12} md={10}>
-    <RoomOptions />
+  <Grid container item direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} xs={12} md={10} style={{height: "89%"}}>
+      <RoomOptions />
   </Grid>
   <Grid item xs={12} md={2} style={{backgroundColor: "rgba(97, 118, 135, 1.0)"}}>
     <Grid container direction={"row"} justifyContent={"flex-start"} alignItems={"flex-start"} style={{ height: "100%", width: "100%"}}>

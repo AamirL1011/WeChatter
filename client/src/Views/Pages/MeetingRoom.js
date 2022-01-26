@@ -1,10 +1,13 @@
 import React, { useState, useRef, useContext } from 'react';
 import Grid from '@material-ui/core/Grid';
-import { TextField, Typography, Button, Skeleton } from '@mui/material';
+import { TextField, Typography, Button, Skeleton, 
+  BottomNavigation, BottomNavigationAction } from '@mui/material';
+import VideocamOffIcon from '@mui/icons-material/VideocamOff';
+import VolumeOffIcon from '@mui/icons-material/VolumeOff';
+import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
 import Paper from '@material-ui/core/Paper';
 import VideoPlayer from "../../Components/VideoPlayer/VideoPlayer.js";
 import Notifications from "../../Components/Notifications/Notifications.js";
-//import Options from "../../Components/Options/Options.js";
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
 import ExitToAppTwoToneIcon from '@mui/icons-material/ExitToAppTwoTone';
 import { useAuth0 } from "@auth0/auth0-react";
@@ -32,7 +35,7 @@ function MeetingRoom() {
   }  
 
   return ( <Grid container item direction={"row"} style={{width: "100vw", height: "100vh"}}>
-  <Grid item xs={12} md={2} style={{backgroundColor: "rgba(151, 152, 153, 1.0)"}}>
+  <Grid item xs={12} md={2} style={{backgroundColor: "rgba(151, 152, 153, 1.0)", height: "89.5%"}}>
     <Grid container item xs={12} direction={"row"} justifyContent={"center"} alignItems={"flex-start"} style={{ height: "100%", width: "100%"}}>
         <Grid item xs={10} md={10} style={{textAlign: "center", paddingTop: "3px"}}>
             <span style={{fontSize: "1.3vw"}}>{user.name}</span>
@@ -60,10 +63,10 @@ function MeetingRoom() {
         </Grid>
     </Grid>
   </Grid>
-  <Grid item xs={12} md={8}>
+  <Grid item xs={12} md={8} style={{height: "89.5%"}}>
     <VideoPlayer/>
   </Grid>
-  <Grid item xs={12} md={2} style={{backgroundColor: "rgba(97, 118, 135, 1.0)"}}>
+  <Grid item xs={12} md={2} style={{backgroundColor: "rgba(97, 118, 135, 1.0)", height: "89.5%"}}>
     <Grid container direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} style={{ height: "100%", width: "100%"}}>
         <Grid item xs={11} style={{border: "2px solid white", borderRadius: "6px", height: "300px", maxHeight: "100%", textAlign: "center"}}>
         Secure messaging feature coming soon!
@@ -93,6 +96,21 @@ function MeetingRoom() {
             </Paper>
         </Grid>
     </Grid>
+  </Grid>
+  <Grid item xs={12} style={{backgroundColor: "white"}}>
+  <Paper sx={{ position: 'absolute', bottom: 0, left: 0, right: 0}} elevation={3}>
+        <BottomNavigation
+          showLabels
+          /* value={value}
+          onChange={(event, newValue) => {
+            setValue(newValue);
+          }} */
+        >
+          <BottomNavigationAction label="Video Off" icon={<VideocamOffIcon />} />
+          <BottomNavigationAction label="Mute" icon={<VolumeOffIcon />} />
+          <BottomNavigationAction label="End Meeting" icon={<CancelPresentationIcon style={{color: "darkred"}} />} />
+        </BottomNavigation>
+      </Paper>
   </Grid>
 </Grid>   );
 }
