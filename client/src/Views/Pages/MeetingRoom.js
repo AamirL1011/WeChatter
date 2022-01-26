@@ -17,7 +17,7 @@ function MeetingRoom() {
 
     let msgInput = useRef(null);
     const { user, logout } = useAuth0();
-    const {roomID, leaveMeeting} = useContext(SocketContext);
+    const {roomID, leaveMeeting, endMeeting} = useContext(SocketContext);
 
 
   const handleEnter = (event) => {
@@ -67,9 +67,14 @@ function MeetingRoom() {
     <Grid container direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} style={{ height: "100%", width: "100%"}}>
         <Grid item xs={11} style={{border: "2px solid white", borderRadius: "6px", height: "300px", maxHeight: "100%", textAlign: "center"}}>
         Secure messaging feature coming soon!
-        <Skeleton>
-          
-        </Skeleton>
+        <Skeleton height={"30px"} animation={false} />
+        <Skeleton height={"30px"} animation={false} />
+        <Skeleton height={"30px"} animation={false} />
+        <Skeleton height={"30px"} animation={false} />
+        <Skeleton height={"30px"} animation={false} />
+        <Skeleton height={"30px"} animation={false} />
+        <Skeleton height={"30px"} animation={false} />
+        <Skeleton height={"30px"} animation={false} />
         </Grid>
         <Grid item xs={11} style={{ height: "90px", width: "100%", textAlign: "center"}}>
             <Paper style={{flexGrow: 1, height: "100%", paddingBottom: "3px"}}>
