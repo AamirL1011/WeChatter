@@ -1,4 +1,4 @@
-# WeChatter
+# WeChatter (Beta)
 
-(Currently a work in progress)
+A WebRTC based video conferencing app.
 
