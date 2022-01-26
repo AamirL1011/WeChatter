@@ -103,7 +103,9 @@ const ContextProvider = ({children}) => {
     const leaveMeeting = () => {
         setMeetingEnded(true);
         setMeetingAccepted(false);
+        setRoomID(local);
         setStream(null);
+        setRemoteStreams([]);
         setMeeting('');
         setNumStreams(num => num-1);
         connectionRef.current.destroy();
@@ -115,6 +117,7 @@ const ContextProvider = ({children}) => {
         setMeetingEnded(true);
         setMeetingAccepted(false);
         setStream(null);
+        setRemoteStreams([]);
         setMeeting('');
         setNumStreams(num => num-1);
         connectionRef.current.destroy();

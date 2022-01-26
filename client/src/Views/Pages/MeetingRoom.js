@@ -1,6 +1,6 @@
 import React, { useState, useRef, useContext } from 'react';
 import Grid from '@material-ui/core/Grid';
-import { TextField, Typography, Button } from '@mui/material';
+import { TextField, Typography, Button, Skeleton } from '@mui/material';
 import Paper from '@material-ui/core/Paper';
 import VideoPlayer from "../../Components/VideoPlayer/VideoPlayer.js";
 import Notifications from "../../Components/Notifications/Notifications.js";
@@ -67,6 +67,9 @@ function MeetingRoom() {
     <Grid container direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} style={{ height: "100%", width: "100%"}}>
         <Grid item xs={11} style={{border: "2px solid white", borderRadius: "6px", height: "300px", maxHeight: "100%", textAlign: "center"}}>
         Secure messaging feature coming soon!
+        <Skeleton>
+          
+        </Skeleton>
         </Grid>
         <Grid item xs={11} style={{ height: "90px", width: "100%", textAlign: "center"}}>
             <Paper style={{flexGrow: 1, height: "100%", paddingBottom: "3px"}}>
