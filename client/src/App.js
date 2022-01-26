@@ -14,6 +14,7 @@ import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import CircleIcon from '@mui/icons-material/Circle';
 import { useAuth0 } from "@auth0/auth0-react";
+import {ContextProvider} from './Services/SocketContext';
 
 
 
@@ -138,7 +139,9 @@ function App(props) {
                 }
                 {
                     isAuthenticated && (
-                      <PageContainer />
+                      <ContextProvider>
+                        <PageContainer />
+                      </ContextProvider>
                     )
                 }
               </Grid>

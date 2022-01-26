@@ -31,6 +31,22 @@ io.on("connection", (socket) => {
     socket.on("answercall", (data) => {
         io.to(data.to).emit("callaccepted", data.signal);
     });
+
+    //========================================-----ROOMS----==========================================
+    socket.emit("local", socket.id);
+
+    socket.on("joinmeeting", ({meetingToJoin, signalData, from, name}) => {
+        io.to(meetingToJoin).emit("joinmeeting", {signal: signalData, from, name});
+    });
+
+    socket.on("allowentry", (data) => {
+        io.to(data.to).emit("entryaccepted", data.signal);
+    });
+
+    socket.on('meetingended', () => {
+        socket.broadcast.emit("meetingended");
+    });
+
 });
 
 server.listen(PORT, () => console.log(`Server listening on port ${PORT}`));

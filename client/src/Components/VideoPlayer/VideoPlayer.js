@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useRef, createRef, useEffect} from 'react';
 import {Grid, Typography, Paper, makeStyles} from '@material-ui/core';
 
 import {SocketContext} from '../../Services/SocketContext';
@@ -46,11 +46,19 @@ const useStyles = makeStyles((theme) => ({
 
 function VideoPlayer() {
 
-    const {name, callAccepted, myVideoFeed, 
-        otherVideoFeed, callEnded, stream, call} = useContext(SocketContext);
+    const {name, meetingAccepted, localFeed, 
+        remoteFeeds, meetingEnded, stream, meeting} = useContext(SocketContext);
 
     const classes = useStyles();
-    
+    const remoteFeed = remoteFeeds[0];
+
+    useEffect(() => {
+      localFeed.current.srcObject = stream;
+      /* navigator.mediaDevices.getUserMedia({video: true, audio: true})
+        .then((currentStream) => {
+            localFeed.current.srcObject = currentStream;
+        }); */
+    }, [])
        
   return (
   <Grid container item direction={"row"} justifyContent={"space-evenly"} alignItems={"center"}>
@@ -59,13 +67,13 @@ function VideoPlayer() {
             <Grid item xs={9} sm={7} md={3} style={{textAlign: "center", display: "flex",
             justifyContent: "center"}}>
                 <Paper className={classes.paperMe}>
-                <video playsInline muted autoPlay ref={myVideoFeed} className={classes.videoMe}  />
+                <video playsInline muted autoPlay ref={localFeed} className={classes.videoMe}  />
                 </Paper>
             </Grid>
           )
       }
       {
-          callAccepted && !callEnded ? (
+          meetingAccepted && !meetingEnded ? (
             <Grid item xs={12} md={10} style={{textAlign: "center", display: "flex",
             justifyContent: "center"}}>
                 <Paper className={classes.paperOther}>
@@ -76,7 +84,7 @@ function VideoPlayer() {
                 </Typography>
                     </Grid> */}
                     <Grid item xs={12} style={{maxHeight: "90%", textAlign: "center"}}>
-                    <video playsInline autoPlay ref={otherVideoFeed} className={classes.videoOther} />
+                    <video playsInline autoPlay ref={remoteFeed} className={classes.videoOther} />
                     </Grid>
                 </Grid>
                 </Paper>
