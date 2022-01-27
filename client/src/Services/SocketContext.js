@@ -43,6 +43,7 @@ const ContextProvider = ({children}) => {
         })
 
         socket.on('meetingended', () => {
+            setRemoteStreams([]);
             setMeetingAccepted(false);
             setRoomID(local);
             window.location.reload();
@@ -108,13 +109,13 @@ const ContextProvider = ({children}) => {
     const leaveMeeting = () => {
         //connectionRef.current.removeStream(stream);
         //connectionRef.current.off("signal");
+        setRemoteStreams([]);
         socket.emit('meetingended');
-        setMeetingEnded(true);
         setMeetingAccepted(false);
         setRoomID(local);
         setStream(null);
-        setRemoteStreams([]);
         setMeeting('');
+        setMeetingEnded(true);
         setNumStreams(num => num-1);
         connectionRef.current.destroy();
         setMeetingEnded(false);

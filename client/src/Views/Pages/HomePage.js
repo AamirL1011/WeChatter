@@ -22,7 +22,7 @@ function HomePage() {
   <Grid container item direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} xs={12} md={10} style={{height: "89%"}}>
       <RoomOptions />
   </Grid>
-  <Grid item xs={12} md={2} style={{backgroundColor: "rgba(97, 118, 135, 1.0)"}}>
+  <Grid item xs={12} md={2} style={{backgroundColor: "rgba(97, 118, 135, 1.0)", minHeight: "100px"}}>
     <Grid container direction={"row"} justifyContent={"flex-start"} alignItems={"flex-start"} style={{ height: "100%", width: "100%"}}>
         <Grid item xs={12} style={{textAlign: "center"}}>
         <Box style={{ flexWrap: 'wrap', wordWrap: 'break-word'}}>

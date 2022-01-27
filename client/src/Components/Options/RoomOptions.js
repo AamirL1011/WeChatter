@@ -29,19 +29,29 @@ function RoomOptions() {
     return (
         <Grid container item direction="row" justifyContent={"space-evenly"} alignItems={"center"} style={{marginTop: "5px"}}>
        <Grid item xs={11} md={6}>
-            <Paper elevation={10}>
+            <Paper style={{borderRadius: "10px", paddingTop: "5px", paddingBottom: "5px"}}  elevation={10}>
                 <form noValidate autoComplete="off">
-                    <Grid container>
-                        <Grid item xs={12} md={12}>
+                    <Grid container direction="row" justifyContent={"space-evenly"} alignItems={"center"}>
+                        <Grid item xs={12} style={{backgroundColor: "rgba(189, 189, 189, 1.0)", height: "50px", width: "100%", marginTop: "-5px", 
+                        borderTopLeftRadius: "10px", borderTopRightRadius: "10px"}}>
+                            <Grid container>
+                                <Grid item xs={11}>
+                                    <Typography variant="h6" style={{paddingLeft: "20px", paddingTop: "10px"}}>
+                                        <span style={{color: "#7d7d7d"}}>Meeting Options</span>
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid item xs={11} md={11} style={{paddingBottom: "10px", paddingTop: "20px"}}>
                             <Typography>
                                 Join meeting as:
                             </Typography>
                             <TextField label="Name" defaultValue={user.name} fullWidth
                              onChange={(e) => setName(e.target.value) } />
                         </Grid>
-                        <Grid item xs={12} md={12}>
+                        <Grid item xs={11} md={11} style={{paddingBottom: "5px"}}>
                             <Typography>
-                                Join a Meeting:
+                                Meeting Room:
                             </Typography>
                             <TextField label="Enter Meeting ID" value={idToJoin} fullWidth
                              onChange={(e) => {
@@ -51,15 +61,20 @@ function RoomOptions() {
                                     setStartMeet(true);
                                  }
                                  setIdToJoin(e.target.value)} 
-                                 } />      
-                                    <Button 
+                                 } 
+                                 style={{paddingBottom: "10px"}}
+                                 />      
+                                                          
+                        </Grid>
+                        <Grid item xs={11} md={11} style={{paddingBottom: "10px", textAlign: "end"}}>
+                             <Button 
                                     variant="contained"
-                                    startIcon={<Phone fontSize="large" />}
-                                    fullWidth
+                                    startIcon={<Phone fontSize="large" style={{color: "white"}} />}
+                                    style={{backgroundColor: "rgba(53, 143, 252, 1.0)", color: "white"}}
                                     onClick={() => handleJoinMeeting(idToJoin)}
                                     >
                                         {(startMeet)? "Start Meeting" : "Join"}
-                                    </Button>                          
+                             </Button>
                         </Grid>
                     </Grid>
                 </form>

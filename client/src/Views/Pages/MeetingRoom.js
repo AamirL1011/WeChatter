@@ -1,10 +1,13 @@
 import React, { useState, useRef, useContext } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { TextField, Typography, Button, Skeleton, 
-  BottomNavigation, BottomNavigationAction } from '@mui/material';
+  BottomNavigation, BottomNavigationAction, Box } from '@mui/material';
 import VideocamOffIcon from '@mui/icons-material/VideocamOff';
-import VolumeOffIcon from '@mui/icons-material/VolumeOff';
+import MicOffIcon from '@mui/icons-material/MicOff';
 import CancelPresentationIcon from '@mui/icons-material/CancelPresentation';
+import ScreenShareIcon from '@mui/icons-material/ScreenShare';
+import ChatIcon from '@mui/icons-material/Chat';
+import PeopleIcon from '@mui/icons-material/People';
 import Paper from '@material-ui/core/Paper';
 import VideoPlayer from "../../Components/VideoPlayer/VideoPlayer.js";
 import Notifications from "../../Components/Notifications/Notifications.js";
@@ -55,10 +58,14 @@ function MeetingRoom() {
                       <span style={{fontSize: "1.2vw", color: "white"}}>Leave Meeting</span>
             </Button>
         </Grid>
-        <Grid item xs={12}>
-          <span>Meeting Room ID: {roomID}</span>
+        <Grid item xs={11} >
+          <Box style={{ flexWrap: 'wrap', wordWrap: 'break-word'}}>
+            <Typography>
+            <span>Meeting Room ID: {roomID}</span>
+            </Typography>
+          </Box>
         </Grid>
-        <Grid item xs={11} style={{height: "75%", border: "2px solid lightgrey"}}>
+        <Grid item xs={11} style={{height: "70%"}}>
         <Notifications />
         </Grid>
     </Grid>
@@ -106,9 +113,12 @@ function MeetingRoom() {
             setValue(newValue);
           }} */
         >
-          <BottomNavigationAction label="Video Off" icon={<VideocamOffIcon />} />
-          <BottomNavigationAction label="Mute" icon={<VolumeOffIcon />} />
-          <BottomNavigationAction label="End Meeting" icon={<CancelPresentationIcon style={{color: "darkred"}} />} />
+          <BottomNavigationAction label="Video Off" disabled icon={<VideocamOffIcon />} />
+          <BottomNavigationAction label="Mute" disabled icon={<MicOffIcon />} />
+          <BottomNavigationAction label="Share Screen" disabled icon={<ScreenShareIcon />} />
+          <BottomNavigationAction label="Chat" disabled icon={<ChatIcon />} />
+          <BottomNavigationAction label="Participants" disabled icon={<PeopleIcon />} />
+          <BottomNavigationAction label="End Meeting" onClick={() => endMeeting()} icon={<CancelPresentationIcon style={{color: "darkred"}} />} />
         </BottomNavigation>
       </Paper>
   </Grid>

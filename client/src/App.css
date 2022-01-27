@@ -44,6 +44,20 @@
   }
 }
 
+.answer-call-button {
+  animation: pulseCall 1.5s infinite;
+}
+
+@keyframes pulseCall {
+  from {
+    box-shadow: 0 0 0 0.10rem rgba(54, 145, 1, 1.00);
+  }
+
+  to {
+    box-shadow: 0 0 0 0.50rem rgba(54, 145, 1, 0.00);
+  }
+}
+
 #motto1 {
   animation: motoAnim 2.0s ease forwards 0.0s;
   opacity: 0.0;
