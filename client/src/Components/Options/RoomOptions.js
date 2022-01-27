@@ -29,11 +29,11 @@ function RoomOptions() {
     return (
         <Grid container item direction="row" justifyContent={"space-evenly"} alignItems={"center"} style={{marginTop: "5px"}}>
        <Grid item xs={11} md={6}>
-            <Paper style={{borderRadius: "10px", paddingTop: "5px", paddingBottom: "5px"}}  elevation={10}>
+            <Paper style={{borderRadius: "6px", paddingTop: "5px", paddingBottom: "5px"}}  elevation={10}>
                 <form noValidate autoComplete="off">
                     <Grid container direction="row" justifyContent={"space-evenly"} alignItems={"center"}>
                         <Grid item xs={12} style={{backgroundColor: "rgba(189, 189, 189, 1.0)", height: "50px", width: "100%", marginTop: "-5px", 
-                        borderTopLeftRadius: "10px", borderTopRightRadius: "10px"}}>
+                        borderTopLeftRadius: "6px", borderTopRightRadius: "6px"}}>
                             <Grid container>
                                 <Grid item xs={11}>
                                     <Typography variant="h6" style={{paddingLeft: "20px", paddingTop: "10px"}}>
@@ -42,14 +42,14 @@ function RoomOptions() {
                                 </Grid>
                             </Grid>
                         </Grid>
-                        <Grid item xs={11} md={11} style={{paddingBottom: "10px", paddingTop: "20px"}}>
+                        <Grid item xs={11} md={5} style={{paddingBottom: "10px", paddingTop: "20px"}}>
                             <Typography>
                                 Join meeting as:
                             </Typography>
                             <TextField label="Name" defaultValue={user.name} fullWidth
                              onChange={(e) => setName(e.target.value) } />
                         </Grid>
-                        <Grid item xs={11} md={11} style={{paddingBottom: "5px"}}>
+                        <Grid item xs={11} md={5} style={{paddingBottom: "10px", paddingTop: "20px"}}>
                             <Typography>
                                 Meeting Room:
                             </Typography>
@@ -62,9 +62,9 @@ function RoomOptions() {
                                  }
                                  setIdToJoin(e.target.value)} 
                                  } 
-                                 style={{paddingBottom: "10px"}}
+                                
                                  />      
-                                                          
+                             
                         </Grid>
                         <Grid item xs={11} md={11} style={{paddingBottom: "10px", textAlign: "end"}}>
                              <Button 

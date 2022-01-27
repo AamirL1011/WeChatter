@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import Grid from '@material-ui/core/Grid';
-import { Button, Box, Divider } from '@mui/material';
+import { Button, Box, Divider, Dialog, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
 import RoomOptions from "../../Components/Options/RoomOptions.js";
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
 import ExitToAppTwoToneIcon from '@mui/icons-material/ExitToAppTwoTone';
@@ -14,7 +14,7 @@ import {SocketContext} from '../../Services/SocketContext.js';
 function HomePage() {
 
     const { user, logout } = useAuth0();
-    const {localFeed} = useContext(SocketContext);
+    const {callWaiting} = useContext(SocketContext);
 
 
   return ( <Grid container item direction={"row"} style={{maxWidth: "100vw", height: "100vh", maxHeight: "100vh"}}>
@@ -54,6 +54,20 @@ function HomePage() {
         <Grid item xs={12} style={{height: "87%"}}></Grid>
     </Grid>
   </Grid>
+  <Dialog
+        open={callWaiting}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          Meeting Room Lobby
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Meeting will begin shortly. Please wait until the host adds you to the room.
+          </DialogContentText>
+        </DialogContent>
+  </Dialog>
   <Footer />
 </Grid>   );
 }

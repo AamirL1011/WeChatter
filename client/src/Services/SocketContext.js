@@ -13,6 +13,7 @@ const ContextProvider = ({children}) => {
     
 
     const [stream, setStream] = useState(null);
+    const [callWaiting, setCallWaiting] = useState(false);
     const [local, setLocal] = useState('');
     const [roomID, setRoomID] = useState('');
     const [name, setName] = useState('');
@@ -84,6 +85,7 @@ const ContextProvider = ({children}) => {
 
     const joinMeeting = (id) => {
         setRoomID(id);
+        setCallWaiting(true);
         console.log("join meeting called");
         setNumStreams(num => num+1);
         const peer = new Peer({initiator: true, trickle: false, stream });
@@ -95,6 +97,7 @@ const ContextProvider = ({children}) => {
         
         peer.on('stream', (remoteStream) => {
             setRemoteStreams(arr => [...arr, remoteStream]);
+            setCallWaiting(false);
             console.log("join meeting remote stream done");
         } );
        
@@ -119,7 +122,7 @@ const ContextProvider = ({children}) => {
         setNumStreams(num => num-1);
         connectionRef.current.destroy();
         setMeetingEnded(false);
-        //window.location.reload();
+        window.location.reload();
     }
 
     const endMeeting = () => {
@@ -157,6 +160,7 @@ const ContextProvider = ({children}) => {
             leaveMeeting,
             endMeeting,
             answerJoin,
+            callWaiting,
         }}>
              {children}   
         </SocketContext.Provider>
