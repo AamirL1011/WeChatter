@@ -10,7 +10,6 @@ docker compose up --build
 ```
 
 ***
-***
 
 ## Running Locally
 
