@@ -2,9 +2,18 @@
 
 A WebRTC based real-time video conferencing app.
 
-How to run locally:
+## Running in Docker
+
+There is a provided Docker compose configuration file provided in the root directly. Simply run the following command in the root directory to build and run both the client and api server:
+```javascript
+docker compose up --build
+```
+
+***
+
+## Running Locally
+
+To run locally, run the following commands in the api folder, then in the client folder:
 ```javascript
 npm install && npm start 
 ```
-Run commands in both the api and client folder.
-
