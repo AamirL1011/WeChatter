@@ -2,9 +2,9 @@
 
 A WebRTC based real-time video conferencing app.
 
-How to run:
+How to run locally:
 ```javascript
 npm install && npm start 
 ```
-Run commands in both the main folder and client folder.
+Run commands in both the api and client folder.
 
