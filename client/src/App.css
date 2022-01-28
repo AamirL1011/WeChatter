@@ -78,3 +78,33 @@
       opacity: 1.0;
   }
 }
+
+
+.loadingDots {
+  opacity: 1;
+  font-size: 28px;
+  animation: fadeWave 2s linear;
+  -webkit-animation: fadeWave 2s linear infinite;
+  -moz-animation: fadeWave 2s linear;
+  -o-animation: fadeWave 2s linear;
+}
+
+@keyframes fadeWave {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+@-moz-keyframes fadeWave {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+@-webkit-keyframes fadeWave {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+@-o-keyframes fadeWave {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
