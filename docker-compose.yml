@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  api:
+    container_name: wechatter_api
+    restart: unless-stopped
+    image: wechatter-api:1.0.0-prod
+    build:
+      context: api
+      target: production
+      dockerfile: Dockerfile
+    environment: 
+      - NODE_ENV=production
+    ports:
+      - 5000:5000
+    networks:
+      - shared-network
+
+  client:
+    container_name: wechatter_client
+    restart: unless-stopped
+    image: wechatter-client:1.0.0-prod
+    build:
+      context: client
+      target: prod
+      dockerfile: Dockerfile
+    ports:
+      - 3000:80
+    networks:
+      - shared-network
+    depends_on:
+      - api
+
+networks:
+  shared-network:

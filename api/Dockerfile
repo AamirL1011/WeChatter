@@ -1,4 +1,4 @@
-FROM node:16.13.2 as build
+FROM node:16.13.2 as production
 
 ENV NODE_ENV=production 
 
