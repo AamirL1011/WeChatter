@@ -13,6 +13,7 @@ import VideoPlayer from "../../Components/VideoPlayer/VideoPlayer.js";
 import Notifications from "../../Components/Notifications/Notifications.js";
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
 import ExitToAppTwoToneIcon from '@mui/icons-material/ExitToAppTwoTone';
+import ErrorBoundary from "../../Components/ErrorBoundary/ErrorBoundary";
 import { useAuth0 } from "@auth0/auth0-react";
 import {SocketContext} from '../../Services/SocketContext.js';
 
@@ -36,6 +37,7 @@ function MeetingRoom() {
         event.target.blur();
       }
   }  
+
 
   return ( <Grid container item direction={"row"} style={{width: "100vw", height: "100vh"}}>
   <Grid item xs={12} md={2} style={{backgroundColor: "rgba(151, 152, 153, 1.0)", height: "89.5%"}}>
@@ -71,7 +73,9 @@ function MeetingRoom() {
     </Grid>
   </Grid>
   <Grid item xs={12} md={8} style={{height: "89.5%"}}>
-    <VideoPlayer/>
+    <ErrorBoundary>
+      <VideoPlayer/>
+    </ErrorBoundary>
   </Grid>
   <Grid item xs={12} md={2} style={{backgroundColor: "rgba(97, 118, 135, 1.0)", height: "89.5%"}}>
     <Grid container direction={"row"} justifyContent={"space-evenly"} alignItems={"center"} style={{ height: "100%", width: "100%"}}>
@@ -113,11 +117,11 @@ function MeetingRoom() {
             setValue(newValue);
           }} */
         >
-          <BottomNavigationAction label="Video Off" disabled icon={<VideocamOffIcon />} />
-          <BottomNavigationAction label="Mute" disabled icon={<MicOffIcon />} />
-          <BottomNavigationAction label="Share Screen" disabled icon={<ScreenShareIcon />} />
-          <BottomNavigationAction label="Chat" disabled icon={<ChatIcon />} />
-          <BottomNavigationAction label="Participants" disabled icon={<PeopleIcon />} />
+          <BottomNavigationAction label={"Not Implemented"} disabled icon={<VideocamOffIcon />} />
+          <BottomNavigationAction label={"Not Implemented"} disabled icon={<MicOffIcon />} />
+          <BottomNavigationAction label={"Not Implemented"} disabled icon={<ScreenShareIcon />} />
+          <BottomNavigationAction label={"Not Implemented"} disabled icon={<ChatIcon />} />
+          <BottomNavigationAction label={"Not Implemented"} disabled icon={<PeopleIcon />} />
           <BottomNavigationAction label="End Meeting" onClick={() => endMeeting()} icon={<CancelPresentationIcon style={{color: "darkred"}} />} />
         </BottomNavigation>
       </Paper>

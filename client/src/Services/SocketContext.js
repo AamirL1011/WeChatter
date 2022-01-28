@@ -43,13 +43,6 @@ const ContextProvider = ({children}) => {
             setMeeting({hasReceivedRequest: true, from, name: callerName, signal})
         })
 
-        socket.on('meetingended', () => {
-            setRemoteStreams([]);
-            setMeetingAccepted(false);
-            setRoomID(local);
-            window.location.reload();
-        })
-
 
     }, [meetingEnded]);
 
@@ -77,6 +70,16 @@ const ContextProvider = ({children}) => {
             setRemoteStreams(arr => [...arr, remoteStream]);
             console.log("anser join remote stream created");
         } );
+
+        socket.on('meetingended', (meetingID) => {
+            if (meetingID == roomID) {
+                setRemoteStreams([]);
+                setMeetingAccepted(false);
+                setRoomID(local);
+                window.location.reload();
+            }
+        });
+
         setNumStreams(num => num+1);
         peer.signal(meeting.signal);
         connectionRef.current = peer;
@@ -106,14 +109,28 @@ const ContextProvider = ({children}) => {
             peer.signal(signal);
             console.log("entry accpeted");
         } )
+
+        socket.on('meetingended', (meetingID) => {
+            if (meetingID == roomID) {
+                setRemoteStreams([]);
+                setMeetingAccepted(false);
+                setRoomID(local);
+                window.location.reload();
+            }
+        });
+
         connectionRef.current = peer;
+    }
+
+    const changeRoomID = (id) => {
+        setRoomID(id);
     }
 
     const leaveMeeting = () => {
         //connectionRef.current.removeStream(stream);
         //connectionRef.current.off("signal");
         setRemoteStreams([]);
-        socket.emit('meetingended');
+        socket.emit('meetingended', roomID);
         setMeetingAccepted(false);
         setRoomID(local);
         setStream(null);
@@ -145,6 +162,7 @@ const ContextProvider = ({children}) => {
     return (
         <SocketContext.Provider value={{
             meeting,
+            changeRoomID,
             setMeetingAccepted,
             setMeetingEnded,
             meetingAccepted,

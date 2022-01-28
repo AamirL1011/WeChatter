@@ -8,7 +8,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 
 function RoomOptions() {
-    const {local, setName, joinMeeting, setMeetingAccepted } = useContext(SocketContext);
+    const {local, setName, joinMeeting, setMeetingAccepted, changeRoomID } = useContext(SocketContext);
     
     const { user } = useAuth0();
     const [idToJoin, setIdToJoin] = useState(''); 
@@ -21,6 +21,7 @@ function RoomOptions() {
 
     const handleJoinMeeting = (joinID) => {
         if (joinID == local) {
+            changeRoomID(local);
             setMeetingAccepted(true);
         } else {
             joinMeeting(joinID);

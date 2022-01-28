@@ -43,8 +43,8 @@ io.on("connection", (socket) => {
         io.to(data.to).emit("entryaccepted", data.signal);
     });
 
-    socket.on('meetingended', () => {
-        socket.broadcast.emit("meetingended");
+    socket.on('meetingended', (meetingID) => {
+        socket.broadcast.emit("meetingended", meetingID);
     });
 
 });

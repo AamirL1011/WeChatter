@@ -65,7 +65,7 @@ function VideoPlayer() {
         }); 
       }
 
-      if (remoteStreams.length > 0) {
+      if ((remoteStreams.length > 0) && (remoteStreams[0] != null)) {
         remoteVidFeed.current.srcObject = remoteStreams[0];
       } 
     
@@ -84,7 +84,7 @@ function VideoPlayer() {
           )
       }
       {
-             meetingAccepted && !meetingEnded ? (
+             meetingAccepted ? (
             <Grid item xs={12} md={10} style={{textAlign: "center", display: "flex",
             justifyContent: "center"}}>
                <div className={classes.paperOther}>
