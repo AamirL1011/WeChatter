@@ -4,7 +4,7 @@ A WebRTC based real-time video conferencing app.
 
 ## Running in Docker
 
-There is a provided Docker compose configuartion file provided in the root directly. Simply run the following command in the root directory to build and run both the client and api server:
+There is a provided Docker compose configuration file provided in the root directly. Simply run the following command in the root directory to build and run both the client and api server:
 ```javascript
 docker compose up --build
 ```
