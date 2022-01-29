@@ -4,7 +4,10 @@ import Peer from 'simple-peer';
 
 const SocketContext = createContext();
 
-let socket = io('http://localhost:5000');
+let endPoint = 'https://wechatter-api-lgkjuzpj3a-uc.a.run.app/'
+let devEndpoint = 'http://localhost:5000'
+
+let socket = io(endPoint);
 
 
 const ContextProvider = ({children}) => {
@@ -32,7 +35,7 @@ const ContextProvider = ({children}) => {
     }, [meetingAccepted])
 
     useEffect(() => {
-        socket = io('http://localhost:5000');
+        socket = io(endPoint);
 
         socket.on('local', (id) => {
             setLocal(id);

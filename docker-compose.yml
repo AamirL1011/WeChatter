@@ -25,7 +25,7 @@ services:
       target: prod
       dockerfile: Dockerfile
     ports:
-      - 3000:80
+      - 3000:8080
     networks:
       - shared-network
     depends_on:
